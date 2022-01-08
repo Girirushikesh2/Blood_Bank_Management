@@ -1,1 +1,100 @@
-<p>contact works!</p>
+<div class="container">
+    <h1>Need Help? Contact our Support Team</h1>
+    <form class="row g-3" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-4 ">
+                <label for="firstname" class="form-label">First name</label>
+                <input type="text" class="form-control" id="firstname" formControlName="firstname">
+                  <div *ngIf="!firstname?.valid && (firstname?.dirty ||firstname?.touched)" class="alert alert-danger">
+                      <div [hidden]="!firstname?.errors?.['required']">
+                          First Name is required.
+                      </div> 
+                      <div [hidden]="!firstname?.errors?.['pattern']">
+                          Only characters are allowed.
+                      </div> 
+                      <div [hidden]="!firstname?.errors?.['minlength']">
+                           Min length is 3 .
+                      </div> 
+                  </div>
+                
+              </div>
+      
+              <div class="col-md-4">
+                  <label for="lastname" class="form-label">Last name</label>
+                  <input type="text" class="form-control" id="lastname" formControlName="lastname">
+                    <div *ngIf="!lastname?.valid && (lastname?.dirty ||lastname?.touched)" class="alert alert-danger">
+                        <div [hidden]="!lastname?.errors?.['required']">
+                            Last Name is required.
+                        </div> 
+                        <div [hidden]="!lastname?.errors?.['pattern']">
+                            Only characters are allowed.
+                        </div> 
+                        <div [hidden]="!lastname?.errors?.['minlength']">
+                            Min length is 3 .
+                        </div> 
+                    </div>
+                  
+            </div>
+
+        </div>
+       
+        
+
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <label for="email" class="form-label">email</label>
+                <input type="text" class="form-control" id="email" formControlName="email">
+                  <div *ngIf="!email?.valid && (email?.dirty ||email?.touched)" class="alert alert-danger">
+                      <div [hidden]="!email?.errors?.['required']">
+                          email is required.
+                      </div>
+                      <div [hidden]="!email?.errors?.['email']">
+                            Invalid email id
+                      </div> 
+                                       
+                    </div>
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <label for="mobile" class="form-label">Mobile no.</label>
+                <input type="text" class="form-control" id="mobile" formControlName="mobile">
+                    <div *ngIf="!mobile?.valid && (mobile?.dirty ||mobile?.touched)" class="alert alert-danger">
+                      <div [hidden]="!mobile?.errors?.['required']">
+                            mobile number is required.
+                      </div>
+                      <div [hidden]="!mobile?.errors?.['pattern']">
+                            invalid mobile number.
+                      </div>
+                                       
+                    </div>
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" formControlName="message" ></textarea>
+                  
+                
+            </div>
+
+        </div>
+
+      
+          
+           
+                                                
+        
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      
+    </form>
+</div>
+
