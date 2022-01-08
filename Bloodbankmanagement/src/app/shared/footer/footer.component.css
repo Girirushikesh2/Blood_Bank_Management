@@ -1,0 +1,43 @@
+.footer{
+    overflow: hidden;
+    position:sticky; 
+    top: 100%; 
+    background-color: var(--secondary-color);;
+    padding: 20px 10px;
+    margin-top: 30px; 
+    margin-bottom: 0PX;
+    
+}
+
+h1{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#icons{
+    text-align: right;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0px 10px;
+    font-size: 20px;
+    align-content: flex-end;
+
+}
+
+
+a:hover{
+    color: var(--primary-color);
+
+}
+
+i{
+    padding: 0px 10px;
+}
+p{
+    color: white;
+    text-align: center;
+}
