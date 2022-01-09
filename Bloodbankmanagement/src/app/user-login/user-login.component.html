@@ -1,0 +1,96 @@
+  <!-- Button trigger modal
+  <button type="button" class="btn btn-outline-success " style="margin-left: 10px;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Login
+</button>
+
+Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content ">
+            <div class="modal-header text-center">
+                <h5 class="modal-title w-100 " id="exampleModalLabel" style="color: black;">Login Window</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    
+                    <div class="row">
+                        <div class="col-md-4 mt-4">
+                            <label for="hospitalemail" class="form-label">Hospital email</label>
+                            <input type="text" class="form-control" id="hospitalemail" formControlName="hospitalemail">
+                              <div *ngIf="!hospitalemail?.valid && (hospitalemail?.dirty ||hospitalemail?.touched)" class="alert alert-danger">
+                                  <div [hidden]="!hospitalemail?.errors?.['required']">
+                                      email is required.
+                                  </div>
+                                  <div [hidden]="!hospitalemail?.errors?.['email']">
+                                        Invalid email id
+                                  </div> 
+                                                   
+                                </div>
+                            
+                        </div>
+            
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4 mt-4">
+                            <label for="hospitalpass" class="form-label">Enter Password</label>
+                            <input type="password" class="form-control" id="hospitalpass" formControlName="hospitalpass">
+                              <div *ngIf="!hospitalpass?.valid && (hospitalpass?.dirty ||hospitalpass?.touched)" class="alert alert-danger">
+                                  <div [hidden]="!hospitalpass?.errors?.['required']">
+                                      Password is required.
+                                  </div>
+                                  <div [hidden]="!hospitalpass?.errors?.['hospitalpass']">
+                                        Invalid Password
+                                  </div> 
+                                                   
+                                </div>
+                            
+                        </div>
+            
+                    </div>
+                    
+                    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>
+                      
+                </form>
+                
+            </div>
+            <div class="text-center mb-3 ">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success" style="margin-left: 10px;">Login</button>
+            </div>
+        </div>
+    </div>
+</div>  -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Hospital Login</h1>
+                    <h6>Please enter email and password!</h6>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    
+                    <div class="mb-3">
+                        <label for="hospitalregistration" class="form-label">Registration no.</label>
+                        <input formControlName="hospitalregistration" type="text" class="form-control" id="hospitalregistration" aria-describedby="emailHelp">
+                        <div id="hospitalregistration" class="form-text">We'll never share your registration no. with anyone else.</div>
+                        <span class="text-danger" *ngIf="loginForm.controls['hospitalregistration'].dirty && loginForm.hasError('required','hospitalregistration')">*Email Id is required</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="hospitalpass" class="form-label">Password</label>
+                        <input formControlName="hospitalpass" type="password" class="form-control" id="hospitalpass">
+                        <span class="text-danger" *ngIf="loginForm.controls['hospitalpass'].dirty && loginForm.hasError('required','hospitalpass')">*Password is required</span>
+                    </div>
+                    
+                    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>
+                      
+                </form>
+                <a style="color: white; margin-top: 10px;" routerLink="/signup">New User? Click to signup!</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+

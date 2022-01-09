@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './shared/navbar/navbar.component';
-import { FooterComponent } from './shared/footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
@@ -20,6 +20,11 @@ import { AdminDashComponent } from './admin-dash/admin-dash.component';
 import { AdminContactComponent } from './admin-contact/admin-contact.component';
 import { HomemainComponent } from './homemain/homemain.component';
 import { AdminHomeMainComponent } from './admin-home-main/admin-home-main.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { UserLoginComponent } from './user-login/user-login.component';
+import { StatusComponent } from './status/status.component';
+import { RequestComponent } from './request/request.component';
+import { AdminHospitalRequestComponent } from './admin-hospital-request/admin-hospital-request.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,12 @@ import { AdminHomeMainComponent } from './admin-home-main/admin-home-main.compon
     AdminDashComponent,
     AdminContactComponent,
     HomemainComponent,
-    AdminHomeMainComponent
+    AdminHomeMainComponent,
+    AdminLoginComponent,
+    UserLoginComponent,
+    StatusComponent,
+    RequestComponent,
+    AdminHospitalRequestComponent
   ],
   imports: [
     BrowserModule,
