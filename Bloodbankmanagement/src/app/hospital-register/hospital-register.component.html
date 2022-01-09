@@ -1,0 +1,200 @@
+<div class="container">
+    <h1>Hospital Registration</h1>
+    
+    <form class="row g-3" [formGroup]="contactForm"  (ngSubmit)="onSubmit()">
+        <div class="row">
+            <div class="col-md-4 ">
+                <label for="hospitalname" class="form-label">Name of hospital</label>
+                <input type="text" class="form-control" id="hospitalname" formControlName="hospitalname">
+                  <div *ngIf="!hospitalname?.valid && (hospitalname?.dirty ||hospitalname?.touched)" class="alert alert-danger">
+                      <div [hidden]="!hospitalname?.errors?.['required']">
+                          Hospital Name is required.
+                      </div> 
+                      <div [hidden]="!hospitalname?.errors?.['pattern']">
+                          Only characters are allowed.
+                      </div> 
+                      <div [hidden]="!hospitalname?.errors?.['minlength']">
+                           Min length is 3 .
+                      </div> 
+                  </div>
+                
+            </div>
+
+            
+            <div class="col-md-4 ">
+                <label for="hospitalmobile" class="form-label">Hospital mobile no.</label>
+                <input type="text" class="form-control" id="hospitalmobile" formControlName="hospitalmobile">
+                    <div *ngIf="!hospitalmobile?.valid && (hospitalmobile?.dirty ||hospitalmobile?.touched)" class="alert alert-danger">
+                        <div [hidden]="!hospitalmobile?.errors?.['required']">
+                            mobile number is required.
+                        </div>
+                        <div [hidden]="!hospitalmobile?.errors?.['pattern']">
+                            invalid mobile number.
+                        </div>
+                                        
+                    </div>
+                
+            </div>
+    
+            
+      
+              
+
+        </div>
+       
+        
+
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <label for="hospitalemail" class="form-label">Hospital email</label>
+                <input type="text" class="form-control" id="hospitalemail" formControlName="hospitalemail">
+                  <div *ngIf="!hospitalemail?.valid && (hospitalemail?.dirty ||hospitalemail?.touched)" class="alert alert-danger">
+                      <div [hidden]="!hospitalemail?.errors?.['required']">
+                          email is required.
+                      </div>
+                      <div [hidden]="!hospitalemail?.errors?.['email']">
+                            Invalid email id
+                      </div> 
+                                       
+                    </div>
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mt-4 ">
+                <label for="hospitalregistration" class="form-label">Five digit hospital registration no.</label>
+                <input type="text" class="form-control" id="hospitalregistration" formControlName="hospitalregistration">
+                    <div *ngIf="!hospitalregistration?.valid && (hospitalregistration?.dirty ||hospitalregistration?.touched)" class="alert alert-danger">
+                        <div [hidden]="!hospitalregistration?.errors?.['required']">
+                            Hospital registration no. is required.
+                        </div>
+                        <div [hidden]="!hospitalregistration?.errors?.['pattern']">
+                            invalid registration number.
+                        </div>
+                                        
+                    </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <label for="hospitaladdress" class="form-label">Address</label>
+                <input type="text" class="form-control" id="hospitaladdress" formControlName="hospitaladdress">
+                    <div *ngIf="!hospitaladdress?.valid && (hospitaladdress?.dirty ||hospitaladdress?.touched)" class="alert alert-danger">
+                      <div [hidden]="!hospitaladdress?.errors?.['required']">
+                        Address is required.
+                      </div>
+                      <div [hidden]="!hospitaladdress?.errors?.['minlength']">
+                        Min length is 3 characters.
+                    </div> 
+                    <div [hidden]="!hospitaladdress?.errors?.['maxlength']">
+                            Max length is 25 characters.
+                    </div> 
+                      
+                                       
+                    </div>
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <label for="hospitalstate" class="form-label">State</label>
+                <select class="form-select" id="hospitalstate" formControlName="hospitalstate">
+                  <option selected disabled value="">Choose...</option>
+                  <option>Maharashtra</option>
+                  <option>Goa</option>
+                  
+                  
+                </select>
+                <div>
+                  
+                </div>
+                  <div *ngIf="!hospitalstate?.valid && (hospitalstate?.dirty ||hospitalstate?.touched)" class="alert alert-danger">
+                      <div [hidden]="!hospitalstate?.errors?.['required']">
+                        state is required.
+                      </div>                                         
+                  </div>
+              </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <label for="hospitalcity" class="form-label">City</label>
+                <select class="form-select" id="hospitalcity" formControlName="hospitalcity">
+                  <option selected disabled value="">Choose...</option>
+                  <option>Pune</option>
+                  <option>Mumbai</option>
+                  <option>Nagpur</option>
+                  <option>Panaji</option>
+                  
+                  
+                </select>
+                <div>
+                  
+                </div>
+                  <div *ngIf="!hospitalcity?.valid && (hospitalcity?.dirty ||hospitalcity?.touched)" class="alert alert-danger">
+                      <div [hidden]="!hospitalcity?.errors?.['required']">
+                        city is required.
+                      </div>                                         
+                  </div>
+              </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <label for="hospitalpass" class="form-label">Enter Password</label>
+                <input type="password" class="form-control" id="hospitalpass" formControlName="hospitalpass">
+                  <div *ngIf="!hospitalpass?.valid && (hospitalpass?.dirty ||hospitalpass?.touched)" class="alert alert-danger">
+                      <div [hidden]="!hospitalpass?.errors?.['required']">
+                          Password is required.
+                      </div>
+                      <div [hidden]="!hospitalpass?.errors?.['hospitalpass']">
+                            Invalid Password
+                      </div> 
+                                       
+                    </div>
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 mt-4">
+                <label for="hospitalconpass" class="form-label">Confirm Password</label>
+                <input type="password" class="form-control" id="hospitalconpass" formControlName="hospitalconpass">
+                  <div *ngIf="!hospitalconpass?.valid && (hospitalconpass?.dirty ||hospitalconpass?.touched)" class="alert alert-danger">
+                      <div [hidden]="!hospitalconpass?.errors?.['required']">
+                          Password is required.
+                      </div>
+                      <div [hidden]="!hospitalconpass?.errors?.['hospitalconpass']">
+                            Invalid Password
+                      </div> 
+                                       
+                    </div>
+                
+            </div>
+
+        </div>
+
+       
+                 
+           
+                                                
+        
+        <div class="col-12">
+          <button class="btn btn-primary" [disabled]="!contactForm.valid" (click)="postCustomerDetails()" type="submit">Submit</button>
+        </div>
+      
+    </form>
+</div>
+
+<div class="lastdiv">
+<i> Our team will call you shortly regarding total estimate of the trip and any queries you want to ask. </i>
+</div>

@@ -1,39 +1,42 @@
-<div class="container">
-    <h1>Need Help? Contact our Support Team</h1>
-    <form class="row g-3" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+<h1>Need help? Contact our team.</h1>
+
+<div class="con ">
+    
+    
+    <form class="row g-3" [formGroup]="contactForm"  (ngSubmit)="onSubmit()">
         <div class="row">
-            <div class="col-md-4 ">
-                <label for="firstname" class="form-label">First name</label>
-                <input type="text" class="form-control" id="firstname" formControlName="firstname">
-                  <div *ngIf="!firstname?.valid && (firstname?.dirty ||firstname?.touched)" class="alert alert-danger">
-                      <div [hidden]="!firstname?.errors?.['required']">
+            <div class="col-md-5 ">
+                <label for="contactfName" class="form-label">First name</label>
+                <input type="text" class="form-control" id="contactfName" formControlName="contactfName">
+                  <div *ngIf="!contactfName?.valid && (contactfName?.dirty ||contactfName?.touched)" class="alert alert-danger">
+                      <div [hidden]="!contactfName?.errors?.['required']">
                           First Name is required.
                       </div> 
-                      <div [hidden]="!firstname?.errors?.['pattern']">
+                      <div [hidden]="!contactfName?.errors?.['pattern']">
                           Only characters are allowed.
                       </div> 
-                      <div [hidden]="!firstname?.errors?.['minlength']">
+                      <div [hidden]="!contactfName?.errors?.['minlength']">
                            Min length is 3 .
                       </div> 
                   </div>
                 
-              </div>
+            </div>
       
-              <div class="col-md-4">
-                  <label for="lastname" class="form-label">Last name</label>
-                  <input type="text" class="form-control" id="lastname" formControlName="lastname">
-                    <div *ngIf="!lastname?.valid && (lastname?.dirty ||lastname?.touched)" class="alert alert-danger">
-                        <div [hidden]="!lastname?.errors?.['required']">
-                            Last Name is required.
-                        </div> 
-                        <div [hidden]="!lastname?.errors?.['pattern']">
-                            Only characters are allowed.
-                        </div> 
-                        <div [hidden]="!lastname?.errors?.['minlength']">
+            <div class="col-md-5">
+                <label for="contactlName" class="form-label">Last name</label>
+                <input type="text" class="form-control" id="contactlName" formControlName="contactlName">
+                <div *ngIf="!contactlName?.valid && (contactlName?.dirty ||contactlName?.touched)" class="alert alert-danger">
+                    <div [hidden]="!contactlName?.errors?.['required']">
+                        Last Name is required.
+                    </div> 
+                    <div [hidden]="!contactlName?.errors?.['pattern']">
+                        Only characters are allowed.
+                    </div> 
+                    <div [hidden]="!contactlName?.errors?.['minlength']">
                             Min length is 3 .
-                        </div> 
-                    </div>
-                  
+                    </div> 
+                </div>
+                
             </div>
 
         </div>
@@ -41,14 +44,14 @@
         
 
         <div class="row">
-            <div class="col-md-4 mt-4">
-                <label for="email" class="form-label">email</label>
-                <input type="text" class="form-control" id="email" formControlName="email">
-                  <div *ngIf="!email?.valid && (email?.dirty ||email?.touched)" class="alert alert-danger">
-                      <div [hidden]="!email?.errors?.['required']">
+            <div class="col-md-5 mt-4">
+                <label for="contactemail" class="form-label">email</label>
+                <input type="text" class="form-control" id="contactemail" formControlName="contactemail">
+                    <div *ngIf="!contactemail?.valid && (contactemail?.dirty ||contactemail?.touched)" class="alert alert-danger">
+                      <div [hidden]="!contactemail?.errors?.['required']">
                           email is required.
                       </div>
-                      <div [hidden]="!email?.errors?.['email']">
+                      <div [hidden]="!contactemail?.errors?.['email']">
                             Invalid email id
                       </div> 
                                        
@@ -59,14 +62,14 @@
         </div>
 
         <div class="row">
-            <div class="col-md-4 mt-4">
-                <label for="mobile" class="form-label">Mobile no.</label>
-                <input type="text" class="form-control" id="mobile" formControlName="mobile">
-                    <div *ngIf="!mobile?.valid && (mobile?.dirty ||mobile?.touched)" class="alert alert-danger">
-                      <div [hidden]="!mobile?.errors?.['required']">
+            <div class="col-md-5 mt-4">
+                <label for="contactmobile" class="form-label">Mobile no.</label>
+                <input type="text" class="form-control" id="contactmobile" formControlName="contactmobile">
+                    <div *ngIf="!contactmobile?.valid && (contactmobile?.dirty ||contactmobile?.touched)" class="alert alert-danger">
+                      <div [hidden]="!contactmobile?.errors?.['required']">
                             mobile number is required.
                       </div>
-                      <div [hidden]="!mobile?.errors?.['pattern']">
+                      <div [hidden]="!contactmobile?.errors?.['pattern']">
                             invalid mobile number.
                       </div>
                                        
@@ -75,26 +78,33 @@
             </div>
 
         </div>
+                     
+                   
+        
 
-        <div class="row">
-            <div class="col-md-4 mt-4">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" formControlName="message" ></textarea>
-                  
-                
+        <div class="col-md-5 mt-4">
+            <label for="contactmessage" class="form-label">Any message?</label>
+            <textarea type="text" class="form-control" id="contactmessage" formControlName="contactmessage"></textarea>
+            <div *ngIf="!contactmessage?.valid && (contactmessage?.dirty ||contactmessage?.touched)" class="alert alert-danger">
+                <div [hidden]="!contactmessage?.errors?.['required']">
+                    Message is required.
+                </div>
+                <div [hidden]="!contactlName?.errors?.['maxlength']">
+                    Max length is 100 characters.
+            </div>  
+               
             </div>
-
+            
         </div>
 
-      
-          
-           
-                                                
+                    
+                                                         
         
-        <div class="col-12">
-          <button class="btn btn-primary" type="submit">Submit</button>
+        <div class="col-12  ">
+          <button class="btn btn-success" [disabled]="!contactForm.valid" (click)="postCustomerDetails()" type="submit">Submit</button>
         </div>
       
     </form>
 </div>
+
 

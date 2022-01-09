@@ -1,0 +1,26 @@
+
+.container{
+    margin-top: 60px;
+    
+  
+    
+}
+h1{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.lastdiv{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+i{
+    margin-left: 60px;
+}
+
+img{
+    width: 300px;
+    display: flex;
+    float: right;
+    
+}

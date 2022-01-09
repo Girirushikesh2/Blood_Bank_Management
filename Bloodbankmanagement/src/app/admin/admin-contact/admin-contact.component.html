@@ -1,0 +1,34 @@
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col"> ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Email ID</th>
+            <th scope="col">Mobile No.</th>
+            <th scope="col">Message</th>
+            
+            
+            
+
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of customerData">
+            <td>{{row.id}}</td>
+            <td>{{row.contactfName}}</td>
+            <td>{{row.contactlName}}</td>
+            <td>{{row.contactemail}}</td>
+            <td>{{row.contactmobile}}</td>
+            <td>{{row.contactmessage}}</td>
+            
+            
+            
+            <td>
+                <button (click)="onEdit(row)" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                <button (click)="deleteCustomer(row)" class="btn btn-danger ">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
