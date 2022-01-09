@@ -1,0 +1,20 @@
+h1{
+    text-align: center;
+    margin: 40px;
+    color: red;
+    font-size: 45px;
+}
+
+.card{
+    margin-top: 15px;
+    border-radius: 30px;
+    padding-bottom: 25px;
+}
+
+p{
+    font-size: 30px;
+}
+
+.smal h1{
+    font-size: 30px;
+}

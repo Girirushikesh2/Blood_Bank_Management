@@ -1,0 +1,92 @@
+<table class="table mt-3">
+    <thead>
+        <tr>
+            <th scope="col">Hospital ID</th>
+            <th scope="col">Hospital Name</th>
+            
+            <th scope="col">Email ID</th>
+            <th scope="col">Mobile No.</th>
+            <th scope="col">Registration no</th>
+            <th scope="col">Address</th>
+            <th scope="col">State</th>
+            <th scope="col">City</th>
+            
+            
+
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of customerData">
+            <td>{{row.id}}</td>
+            <td>{{row.hospitalname}}</td>
+            
+            <td>{{row.hospitalemail}}</td>
+            <td>{{row.hospitalmobile}}</td>
+            <td>{{row.hospitalregistration}}</td>
+            <td>{{row.hospitaladdress}}</td>
+            <td>{{row.hospitalstate}}</td>
+            <td>{{row.hospitalcity}}</td>
+            
+            <td>
+                <button (click)="onEdit(row)" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
+                <button (click)="deleteCustomer(row)" class="btn btn-danger ">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+  
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Customer Details</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="formValue">
+                <div class="mb-3">
+                  <label for="hospitalname" class="form-label">Hospital Name</label>
+                  <input type="text" formControlName="hospitalname" class="form-control" id="hospitalname" >
+                  
+                </div>
+                
+    
+                <div class="mb-3">
+                    <label for="hospitalemail" class="form-label">Hospital Email ID</label>
+                    <input type="hospitalemail" formControlName="hospitalemail" class="form-control" id="hospitalemail">
+                </div>
+    
+                <div class="mb-3">
+                    <label for="hospitalmobile" class="form-label">Hospital Mobile Number</label>
+                    <input type="text" formControlName="hospitalmobile" class="form-control" id="hospitalmobile">
+                </div>
+                <div class="mb-3">
+                    <label for="hospitalregistration" class="form-label">Hospital Registration Number</label>
+                    <input type="text" formControlName="hospitalregistration" class="form-control" id="hospitalregistration">
+                </div>
+                <div class="mb-3">
+                    <label for="hospitaladdress" class="form-label">Hospital Address</label>
+                    <input type="text" formControlName="hospitaladdress" class="form-control" id="hospitaladdress">
+                </div>
+                <div class="mb-3">
+                    <label for="hospitalstate" class="form-label">Hospital State</label>
+                    <input type="text" formControlName="hospitalstate" class="form-control" id="hospitalstate">
+                </div>
+                <div class="mb-3">
+                    <label for="hospitalcity" class="form-label">Hospital city</label>
+                    <input type="text" formControlName="hospitalcity" class="form-control" id="hospitalcity">
+                </div>
+                                    
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" *ngIf="showAdd" (click)="postCustomerDetails()" class="btn btn-primary">Add</button>
+            <button type="button" *ngIf="showUpdate" (click)="updateCustomerDetails()" class="btn btn-primary">Update</button>
+        </div>
+        </div>
+    </div>
+    </div>
