@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { DonorService } from '../services/donor.service';
-import { CustomerModel } from '../admin/admin-donorlist/donor.model';
+import { CustomerModel } from '../admin-donorlist/donor.model';
 
 @Component({
   selector: 'app-donor-register',

@@ -1,0 +1,104 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">Life Line</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+    
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="home"  routerLinkActive="active-link" [routerLinkActiveOptions]="{exact:true}" >Home</a>
+                </li>
+        
+                <!-- <li class="nav-item">
+                    <a class="nav-link" routerLink="donate" routerLinkActive="active-link">Contact us</a>
+                </li> -->
+                
+                        
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="about" routerLinkActive="active-link">About Us</a>
+                </li>
+        
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="contact" routerLinkActive="active-link">Contact Us</a>
+                </li>
+                
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Registration
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="donor-register" routerLinkActive="active-link">Donor Registration</a></li>
+                        <li><a class="dropdown-item" routerLink="hospital-register" routerLinkActive="active-link">Hospital Registration </a></li>
+                       
+                    </ul>
+                </li>
+        
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Other
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">FAQs</a></li>
+                        <li><a class="dropdown-item" href="#">Benifits of donation</a></li>
+                        
+                        <li><a class="dropdown-item" href="#">Gallery</a></li>
+                    </ul>
+                </li>
+                <div *ngIf="!message">
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="user-login" routerLinkActive="active-link">Hospital login</a>
+                    </li>
+
+                </div>
+
+                <div *ngIf="message">
+                    <li class="nav-item">
+                        <a  class="nav-link" [routerLink]=""  (click)='logout()'>Logout</a>
+
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="request" routerLinkActive="active-link">Request blood</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" routerLink="status" routerLinkActive="active-link">Status</a>
+                    </li>
+                    
+
+                </div>
+               
+               
+
+               
+                
+                
+
+                <!-- <li class="nav-item">
+                    <a class="nav-link" routerLink="donor-register" routerLinkActive="active-link">Donor registration</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="hospital-register" routerLinkActive="active-link">Hospital registration</a>
+                </li>
+                -->
+                    
+            
+            </ul>
+            
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+    
+              
+  
+        
+        </div>
+    </div>
+  
+    
+</nav>

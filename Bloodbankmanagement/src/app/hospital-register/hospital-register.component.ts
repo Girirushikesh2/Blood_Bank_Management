@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { HospitallistModel } from '../admin/admin-hospital-list/hospital-list.model';
+import { HospitallistModel } from '../admin-hospital-list/hospital-list.model';
 import { HospitallistService } from 'src/app/services/hospitallist.service'; 
 
 @Component({

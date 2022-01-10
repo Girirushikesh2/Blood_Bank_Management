@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import {HttpClient  } from '@angular/common/http'
 import { map } from 'rxjs/operators';
+import { Observable, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HospitallistService {
 
+  public subject=new Subject<boolean>();
+  
   constructor(private http : HttpClient) { }
 
   postCust(data : any){
@@ -35,6 +38,11 @@ export class HospitallistService {
     .pipe(map((res:any)=>{
       return res;
     }))
+  }
+
+  recievedStatus():Observable<boolean>
+  {
+    return this.subject.asObservable();
   }
 
 }
