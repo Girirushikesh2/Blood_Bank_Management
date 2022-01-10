@@ -36,34 +36,15 @@ export class AdminHospitalRequestComponent implements OnInit {
     this.getAllCustomer();
   }
 
-  // clickAddCust(){
-  //   this.formValue.reset();
-  //   this.showAdd=true;
-  //   this.showUpdate=false;
+  deleteCustomer(row : any){
+    this.requestblood.deleteCustomer(row.id)
+    .subscribe(res=>{
+      alert("Customer Deleted")
+      this.getAllCustomer();
+    })
+  }
 
-  // }
-
-  // postCustomerDetails(){
-  //   this.RequestModelObj.hospitalname = this.formValue.value.hospitalname;
-  //   // this.RequestModelObj.hospitalregistration = this.formValue.value.hospitalregistration;
-  //   this.RequestModelObj.bloodgroup = this.formValue.value.bloodgroup;
-  //   this.RequestModelObj.quantity = this.formValue.value.quantity;
-    
- 
-
-  //   this.requestblood.postCust(this.RequestModelObj)
-  //   .subscribe(res=>{
-  //     console.log(res);
-  //     alert("Request Added Successfully")
-  //     let ref = document.getElementById('cancel')
-  //     ref?.click();
-  //     this.formValue.reset();
-  //     this.getAllCustomer();
-  //   },
-  //   err=>{
-  //     alert("Something went wrong")
-  //   })
-  // }
+  
 
   getAllCustomer(){
     this.requestblood.getCustomer()
@@ -94,19 +75,7 @@ export class AdminHospitalRequestComponent implements OnInit {
     })
   }
 
-  // updateCustomerDetails(){
-  //   this.RequestModelObj.status = this.formValue.value.status;
-    
-
-  //   this.requestblood.updateCustomer(this.RequestModelObj, this.RequestModelObj.id)
-  //   .subscribe(res=>{
-  //     alert("Updated successfully");
-  //     let ref = document.getElementById('cancel')
-  //     ref?.click();
-  //     this.formValue.reset();
-  //     this.getAllCustomer();
-  //   })
-  // }
+  
   
 
   

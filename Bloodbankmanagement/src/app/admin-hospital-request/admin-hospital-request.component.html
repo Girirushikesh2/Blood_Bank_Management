@@ -2,7 +2,6 @@
     <thead>
         <tr>
             <th scope="col">Request ID</th>
-            <th scope="col">Hospital Name</th>
             <th scope="col">Registration no</th>
             <th scope="col">Blood group</th>
             <th scope="col">Quantity (in bags)</th>
@@ -12,13 +11,15 @@
     <tbody>
         <tr *ngFor="let row of customerData">
             <td>{{row.id}}</td>
-            <td>{{row.hospitalname}}</td>
             <td>{{row.hospitalregistration}}</td>
             <td>{{row.bloodgroup}}</td>
             <td>{{row.quantity}}</td>
                                   
-            <td><button (click)="approve(row.id)">Approve</button></td>
-            <td><button (click)="reject(row.id)">Reject</button></td>
+            <td>
+                <button type="button" class="btn btn-success " (click)="approve(row.id)">Approve</button>
+                <button type="button" class="btn btn-danger " (click)="reject(row.id)">Reject</button>
+                <button (click)="deleteCustomer(row)" class="btn btn-danger ">Delete</button>
+            </td>
         </tr>
     </tbody>
 </table>

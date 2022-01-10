@@ -25,6 +25,9 @@ import { UserLoginComponent } from './user-login/user-login.component';
 import { StatusComponent } from './status/status.component';
 import { RequestComponent } from './request/request.component';
 import { AdminHospitalRequestComponent } from './admin-hospital-request/admin-hospital-request.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { KnowmoreComponent } from './knowmore/knowmore.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { AdminHospitalRequestComponent } from './admin-hospital-request/admin-ho
     UserLoginComponent,
     StatusComponent,
     RequestComponent,
-    AdminHospitalRequestComponent
+    AdminHospitalRequestComponent,
+    GalleryComponent,
+    FaqsComponent,
+    KnowmoreComponent
   ],
   imports: [
     BrowserModule,

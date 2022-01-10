@@ -12,9 +12,12 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 import { ContactComponent } from './contact/contact.component';
 import { DonorRegisterComponent } from './donor-register/donor-register.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { HomemainComponent } from './homemain/homemain.component';
 import { HospitalRegisterComponent } from './hospital-register/hospital-register.component';
+import { KnowmoreComponent } from './knowmore/knowmore.component';
 import { RequestComponent } from './request/request.component';
 import { StatusComponent } from './status/status.component';
 import { UserLoginComponent } from './user-login/user-login.component';
@@ -34,6 +37,9 @@ const routes: Routes = [
   {path:'user-login',component:UserLoginComponent},
   {path:'status',component:StatusComponent},
   {path:'request',component:RequestComponent},
+  {path:'gallery',component:GalleryComponent},
+  {path:'faqs',component:FaqsComponent},
+  {path:'knowmore',component:KnowmoreComponent},
   ]
   
   },
