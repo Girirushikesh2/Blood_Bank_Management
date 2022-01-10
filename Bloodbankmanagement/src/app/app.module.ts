@@ -28,6 +28,8 @@ import { AdminHospitalRequestComponent } from './admin-hospital-request/admin-ho
 import { GalleryComponent } from './gallery/gallery.component';
 import { FaqsComponent } from './faqs/faqs.component';
 import { KnowmoreComponent } from './knowmore/knowmore.component';
+import { AdminStockComponent } from './admin-stock/admin-stock.component';
+import {  LightboxModule } from 'ngx-lightbox';
 
 @NgModule({
   declarations: [
@@ -54,14 +56,16 @@ import { KnowmoreComponent } from './knowmore/knowmore.component';
     AdminHospitalRequestComponent,
     GalleryComponent,
     FaqsComponent,
-    KnowmoreComponent
+    KnowmoreComponent,
+    AdminStockComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    LightboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

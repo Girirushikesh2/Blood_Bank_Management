@@ -9,6 +9,7 @@ import { AdminHomeMainComponent } from './admin-home-main/admin-home-main.compon
 import { AdminHospitalListComponent } from './admin-hospital-list/admin-hospital-list.component';
 import { AdminHospitalRequestComponent } from './admin-hospital-request/admin-hospital-request.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { AdminStockComponent } from './admin-stock/admin-stock.component';
 
 import { ContactComponent } from './contact/contact.component';
 import { DonorRegisterComponent } from './donor-register/donor-register.component';
@@ -55,22 +56,14 @@ const routes: Routes = [
     {path:'admin-donorlist',component:AdminDonorlistComponent},
     {path:'admin-contact',component:AdminContactComponent},
     {path:'admin-hospital-request',component:AdminHospitalRequestComponent},
+    {path:'admin-stock',component:AdminStockComponent},
     
 
 
   ]  
   },
 
-//   {path:'Scheme',component:SchemeComponent,
-// children:
-// [{path:'',redirectTo:'/StudentHomePage/Scheme/Scheme1', pathMatch:'full'},
-// {path:'Scheme1',component: Scheme1Component},
-// {path:'Scheme2',component: Scheme2Component},
-// {path:'Scheme3',component: Scheme3Component}]},
-// {path:'Scholarship',component: ScholarshipComponent},
-// {path: 'CheckStudentStatus', component: CheckStudentStatusComponent},
-// {path:'Studentprofile',component:StudentprofileComponent}]
-// },
+
   
 ];
 

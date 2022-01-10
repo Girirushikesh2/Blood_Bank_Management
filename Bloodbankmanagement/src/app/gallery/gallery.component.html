@@ -1,1 +1,18 @@
-<p>gallery works!</p>
+<div>
+    <h1>Wedding Photo Gallery</h1>
+
+</div>
+
+<div class="grid">
+    <div class="onclick"  *ngFor="let image of pic; let i=index">
+        <div > 
+            <img [src]="image.thumb" (click)="open(i)">
+        </div>
+    </div>
+
+    <div  *ngFor="let image1 of pic.slice(10,20);">
+        <div > 
+            <img [src]="image1.thumb">  
+        </div>
+    </div>
+</div>
