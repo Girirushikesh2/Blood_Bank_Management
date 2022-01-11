@@ -12,28 +12,28 @@ export class HospitallistService {
   
   constructor(private http : HttpClient) { }
 
-  postCust(data : any){
+  postHosp(data : any){
     return this.http.post<any>("http://localhost:3000/hospitallist",data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
-  getCustomer(){
+  getHospital(){
     return this.http.get<any>("http://localhost:3000/hospitallist")
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
-  updateCustomer(data:any,id:number){
+  updateHospital(data:any,id:number){
     return this.http.put<any>("http://localhost:3000/hospitallist/"+id,data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
-  deleteCustomer(id:number){
+  deleteHospital(id:number){
     return this.http.delete<any>("http://localhost:3000/hospitallist/"+id)
     .pipe(map((res:any)=>{
       return res;

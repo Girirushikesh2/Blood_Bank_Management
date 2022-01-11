@@ -13,8 +13,7 @@ export class AdminContactComponent implements OnInit {
   formValue !: FormGroup;
   ContactModelObj : ContactModel = new ContactModel();
   customerData!:any;
-  showAdd!:boolean;
-  showUpdate !:boolean;
+ 
 
   constructor(private formbuilder: FormBuilder, private contact :ContactService) { }
 
@@ -37,34 +36,11 @@ export class AdminContactComponent implements OnInit {
 
   clickAddCust(){
     this.formValue.reset();
-    this.showAdd=true;
-    this.showUpdate=false;
+   
 
   }
 
-  postCustomerDetails(){
-    this.ContactModelObj.contactfName = this.formValue.value.contactfName;
-    this.ContactModelObj.contactlName = this.formValue.value.contactlName;
-    this.ContactModelObj.contactemail = this.formValue.value.contactemail;
-    this.ContactModelObj.contactmobile = this.formValue.value.contactmobile;
-    this.ContactModelObj.contactmessage = this.formValue.value.contactmessage;
-    
-    
-    
-
-    this.contact.postCust(this.ContactModelObj)
-    .subscribe(res=>{
-      console.log(res);
-      alert("Customer Added Successfully")
-      let ref = document.getElementById('cancel')
-      ref?.click();
-      this.formValue.reset();
-      this.getAllCustomer();
-    },
-    err=>{
-      alert("Something went wrong")
-    })
-  }
+  
 
   getAllCustomer(){
     this.contact.getCustomer()
@@ -80,39 +56,6 @@ export class AdminContactComponent implements OnInit {
     })
   }
 
-  onEdit(row:any){
-    this.showAdd=false;
-    this.showUpdate=true;
-    this.ContactModelObj.id = row.id;
-    this.formValue.controls['contactfName'].setValue(row.contactfName);
-    this.formValue.controls['contactlName'].setValue(row.contactlName);
-    this.formValue.controls['contactemail'].setValue(row.contactemail);
-    this.formValue.controls['contactmobile'].setValue(row.contactmobile);
-    this.formValue.controls['contactmessage'].setValue(row.contactmessage);
-    
-
-    
-    
-  }
-
-  updateCustomerDetails(){
-    this.ContactModelObj.contactfName = this.formValue.value.contactfName;
-    this.ContactModelObj.contactlName = this.formValue.value.contactlName;
-    this.ContactModelObj.contactemail = this.formValue.value.contactemail;
-    this.ContactModelObj.contactmobile = this.formValue.value.contactmobile;
-    this.ContactModelObj.contactmessage = this.formValue.value.contactmessage;
-    
   
-    
-
-    this.contact.updateCustomer(this.ContactModelObj, this.ContactModelObj.id)
-    .subscribe(res=>{
-      alert("Updated successfully");
-      let ref = document.getElementById('cancel')
-      ref?.click();
-      this.formValue.reset();
-      this.getAllCustomer();
-    })
-  }
 
 }

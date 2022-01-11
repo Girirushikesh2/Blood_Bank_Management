@@ -9,20 +9,20 @@ export class RequestService {
 
   constructor(private http : HttpClient) { }
 
-  postCust(data : any){
+  postRequ(data : any){
     return this.http.post<any>("http://localhost:3000/request",data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
-  getCustomer(){
+  getRequest(){
     return this.http.get<any>("http://localhost:3000/request")
     .pipe(map((res:any)=>{
       return res;
     }))
   }
-  getCustomerid(id:number){
+  getRequestid(id:number){
     return this.http.get<any>("http://localhost:3000/request/"+id)
     .pipe(map((res:any)=>{
       return res;
@@ -38,14 +38,14 @@ export class RequestService {
 
   
 
-  updateCustomer(id:number,data:any){
+  updateRequest(id:number,data:any){
     return this.http.put<any>("http://localhost:3000/request/"+id,data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
-  deleteCustomer(id:number){
+  deleteRequest(id:number){
     return this.http.delete<any>("http://localhost:3000/request/"+id)
     .pipe(map((res:any)=>{
       return res;

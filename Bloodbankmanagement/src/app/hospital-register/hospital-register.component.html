@@ -4,7 +4,7 @@
             <div class="card">
                 <h1 class="mt-4">Hospital Registration</h1>
     
-                <form class="row g-3 justify-content-md-center " [formGroup]="contactForm"  (ngSubmit)="onSubmit()">
+                <form class="row g-3 justify-content-md-center " [formGroup]="hospitalForm"  (ngSubmit)="onSubmit()">
                     <div class="row">
                         <div class="col-md-5 ">
                             <label for="hospitalname" class="form-label">Name of hospital</label>
@@ -167,32 +167,12 @@
                         </div>
 
                     </div>
-
-                    <!-- <div class="row">
-                        <div class="col-md-5 mt-4">
-                            <label for="hospitalconpass" class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control" id="hospitalconpass" formControlName="hospitalconpass">
-                            <div *ngIf="!hospitalconpass?.valid && (hospitalconpass?.dirty ||hospitalconpass?.touched)" class="alert alert-danger">
-                                <div [hidden]="!hospitalconpass?.errors?.['required']">
-                                    Password is required.
-                                </div>
-                                <div [hidden]="!hospitalconpass?.errors?.['hospitalconpass']">
-                                        Invalid Password
-                                </div> 
-                                                
-                                </div>
-                            
-                        </div>
-
-                    </div> -->
-
-                
-                            
-                    
-                                                            
+                                
+                           
+                                                                                
                     
                     <div class="col-3 justify-content-md-center mb-3">
-                    <button class="btn btn-primary" [disabled]="!contactForm.valid" (click)="postCustomerDetails()" type="submit">Submit</button>
+                    <button class="btn btn-primary" [disabled]="!hospitalForm.valid" (click)="postHospitalDetails()" type="submit">Submit</button>
                     </div>
                 
                 </form>

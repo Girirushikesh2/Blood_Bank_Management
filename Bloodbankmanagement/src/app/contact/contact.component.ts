@@ -12,8 +12,7 @@ export class ContactComponent implements OnInit {
 
   ContactModelObj : ContactModel = new ContactModel();
 
-  contactForm = new FormGroup({
-    // firstName: new FormControl("",[Validators.required,Validators.minLength(3),Validators.pattern("^[a-zA-Z]+$")]),
+  contactForm = new FormGroup({ 
     
   })
 

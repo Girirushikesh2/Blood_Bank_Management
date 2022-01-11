@@ -17,7 +17,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let row of customerData">
+        <tr *ngFor="let row of hospitalData">
             <td>{{row.id}}</td>
             <td>{{row.hospitalname}}</td>
             
@@ -30,7 +30,7 @@
             
             <td>
                 <button (click)="onEdit(row)" class="btn btn-info" type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button>
-                <button (click)="deleteCustomer(row)" class="btn btn-danger ">Delete</button>
+                <button (click)="deleteHospital(row)" class="btn btn-danger ">Delete</button>
             </td>
         </tr>
     </tbody>
@@ -84,8 +84,8 @@
         </div>
         <div class="modal-footer">
             <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" *ngIf="showAdd" (click)="postCustomerDetails()" class="btn btn-primary">Add</button>
-            <button type="button" *ngIf="showUpdate" (click)="updateCustomerDetails()" class="btn btn-primary">Update</button>
+            
+            <button type="button"  (click)="updateHospitalDetails()" class="btn btn-primary">Update</button>
         </div>
         </div>
     </div>

@@ -11,7 +11,7 @@ export class StatusComponent implements OnInit {
 
   info!:any;
   
-  customerData!:any;
+  
  
 
   constructor(private requestblood:RequestService, ) { }

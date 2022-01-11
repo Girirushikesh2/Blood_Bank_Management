@@ -89,26 +89,26 @@
       "hospitalpass": ""
     },
     {
-      "id": 9,
-      "hospitalname": "durgesh",
-      "hospitalemail": "durgesh@gmail.com",
-      "hospitalmobile": "1234567899",
-      "hospitalregistration": "11223",
-      "hospitaladdress": "JM road",
-      "hospitalstate": "Maharashtra",
-      "hospitalcity": "Pune",
-      "hospitalpass": "123456"
-    },
-    {
       "id": 10,
-      "hospitalname": "RG hosp",
+      "hospitalname": "RG hospital",
       "hospitalemail": "rg@gmail.com",
       "hospitalmobile": "1234568798",
       "hospitalregistration": "98765",
       "hospitaladdress": "rahatgaon road",
       "hospitalstate": "Maharashtra",
       "hospitalcity": "Nagpur",
-      "hospitalpass": "12345"
+      "hospitalpass": ""
+    },
+    {
+      "id": 11,
+      "hospitalname": "Durgesh Hospital",
+      "hospitalemail": "durgeshhosp@gmail.com",
+      "hospitalmobile": "7845123698",
+      "hospitalregistration": "14785",
+      "hospitaladdress": "rahatgaon road",
+      "hospitalstate": "Maharashtra",
+      "hospitalcity": "Mumbai",
+      "hospitalpass": "123456"
     }
   ],
   "contact": [
@@ -190,6 +190,22 @@
       "bloodgroup": "B-",
       "quantity": "20",
       "status": "approved"
+    },
+    {
+      "id": 15,
+      "hospitalname": "",
+      "hospitalregistration": "14785",
+      "bloodgroup": "B-",
+      "quantity": "05",
+      "status": "rejected"
+    },
+    {
+      "id": 16,
+      "hospitalname": "",
+      "hospitalregistration": "14785",
+      "bloodgroup": "B-",
+      "quantity": "20",
+      "status": "rejected"
     }
   ],
   "stock": [

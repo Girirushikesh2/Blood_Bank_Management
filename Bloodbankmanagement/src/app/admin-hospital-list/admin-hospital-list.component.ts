@@ -12,16 +12,14 @@ export class AdminHospitalListComponent implements OnInit {
 
   formValue !: FormGroup;
   HospitallistModelObj : HospitallistModel = new HospitallistModel();
-  customerData!:any;
-  showAdd!:boolean;
-  showUpdate !:boolean;
+  hospitalData!:any;
+  
 
   constructor(private formbuilder: FormBuilder, private hospitallist:HospitallistService) { }
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
       hospitalname : [''],
-      
       hospitalemail : [''],
       hospitalmobile: [''],
       hospitalregistration:[''],
@@ -35,19 +33,13 @@ export class AdminHospitalListComponent implements OnInit {
 
 
     })
-    this.getAllCustomer();
+    this.getAllHospital();
   }
 
-  clickAddCust(){
-    this.formValue.reset();
-    this.showAdd=true;
-    this.showUpdate=false;
+  
 
-  }
-
-  postCustomerDetails(){
+  postHospitalDetails(){
     this.HospitallistModelObj.hospitalname = this.formValue.value.hospitalname;
-    
     this.HospitallistModelObj.hospitalemail = this.formValue.value.hospitalemail;
     this.HospitallistModelObj.hospitalmobile = this.formValue.value.hospitalmobile;
     this.HospitallistModelObj.hospitalregistration = this.formValue.value.hospitalregistration;
@@ -56,37 +48,36 @@ export class AdminHospitalListComponent implements OnInit {
     this.HospitallistModelObj.hospitalcity = this.formValue.value.hospitalcity;
  
 
-    this.hospitallist.postCust(this.HospitallistModelObj)
+    this.hospitallist.postHosp(this.HospitallistModelObj)
     .subscribe(res=>{
       console.log(res);
-      alert("Customer Added Successfully")
+      alert("Hospital Added Successfully")
       let ref = document.getElementById('cancel')
       ref?.click();
       this.formValue.reset();
-      this.getAllCustomer();
+      this.getAllHospital();
     },
     err=>{
       alert("Something went wrong")
     })
   }
 
-  getAllCustomer(){
-    this.hospitallist.getCustomer()
+  getAllHospital(){
+    this.hospitallist.getHospital()
     .subscribe(res=>{
-      this.customerData = res;
+      this.hospitalData = res;
     })
   }
-  deleteCustomer(row : any){
-    this.hospitallist.deleteCustomer(row.id)
+  deleteHospital(row : any){
+    this.hospitallist.deleteHospital(row.id)
     .subscribe(res=>{
-      alert("Customer Deleted")
-      this.getAllCustomer();
+      alert("Hospital Deleted")
+      this.getAllHospital();
     })
   }
 
   onEdit(row:any){
-    this.showAdd=false;
-    this.showUpdate=true;
+    
     this.HospitallistModelObj.id = row.id;
     this.formValue.controls['hospitalname'].setValue(row.hospitalname);
     this.formValue.controls['hospitalemail'].setValue(row.hospitalemail);
@@ -100,7 +91,7 @@ export class AdminHospitalListComponent implements OnInit {
     
   }
 
-  updateCustomerDetails(){
+  updateHospitalDetails(){
     this.HospitallistModelObj.hospitalname = this.formValue.value.hospitalname;
    
     this.HospitallistModelObj.hospitalemail = this.formValue.value.hospitalemail;
@@ -110,13 +101,13 @@ export class AdminHospitalListComponent implements OnInit {
     this.HospitallistModelObj.hospitalstate = this.formValue.value.hospitalstate;
     this.HospitallistModelObj.hospitalcity = this.formValue.value.hospitalcity;
         
-    this.hospitallist.updateCustomer(this.HospitallistModelObj, this.HospitallistModelObj.id)
+    this.hospitallist.updateHospital(this.HospitallistModelObj, this.HospitallistModelObj.id)
     .subscribe(res=>{
       alert("Updated successfully");
       let ref = document.getElementById('cancel')
       ref?.click();
       this.formValue.reset();
-      this.getAllCustomer();
+      this.getAllHospital();
     })
   }
 
