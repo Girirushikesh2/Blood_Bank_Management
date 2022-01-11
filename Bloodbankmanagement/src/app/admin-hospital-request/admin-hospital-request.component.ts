@@ -12,7 +12,7 @@ export class AdminHospitalRequestComponent implements OnInit {
 
   formValue !: FormGroup;
   RequestModelObj : RequestModel = new RequestModel();
-  customerData!:any;
+  requestData!:any;
   showAdd!:boolean;
   showUpdate !:boolean;
   info!:any[];
@@ -20,7 +20,7 @@ export class AdminHospitalRequestComponent implements OnInit {
   constructor(private formbuilder: FormBuilder, private requestblood:RequestService) { }
 
   ngOnInit(): void {
-    this.requestblood.getCustomer().subscribe((res)=>{
+    this.requestblood.getRequest().subscribe((res)=>{
       console.log(res);
       this.info=res;
       console.log(this.info);
@@ -33,42 +33,42 @@ export class AdminHospitalRequestComponent implements OnInit {
       status:[''],
               
     })
-    this.getAllCustomer();
+    this.getAllRequest();
   }
 
-  deleteCustomer(row : any){
-    this.requestblood.deleteCustomer(row.id)
+  deleteRequest(row : any){
+    this.requestblood.deleteRequest(row.id)
     .subscribe(res=>{
-      alert("Customer Deleted")
-      this.getAllCustomer();
+      alert("Request Deleted")
+      this.getAllRequest();
     })
   }
 
   
 
-  getAllCustomer(){
-    this.requestblood.getCustomer()
+  getAllRequest(){
+    this.requestblood.getRequest()
     .subscribe(res=>{
-      this.customerData = res;
+      this.requestData = res;
     })
   }
 
   approve(id:number){
   
-    this.requestblood.getCustomerid(id).subscribe((data)=>{
+    this.requestblood.getRequestid(id).subscribe((data)=>{
       console.log(data);
       data.status="approved"
-      this.requestblood.updateCustomer(id,data).subscribe((res)=>{
+      this.requestblood.updateRequest(id,data).subscribe((res)=>{
         console.log(res);
         this.ngOnInit();
       })
     })
   }
   reject(id:number){
-    this.requestblood.getCustomerid(id).subscribe((data)=>{
+    this.requestblood.getRequestid(id).subscribe((data)=>{
       console.log(data);
       data.status="rejected"
-      this.requestblood.updateCustomer(id,data).subscribe((res)=>{
+      this.requestblood.updateRequest(id,data).subscribe((res)=>{
         console.log(res);
         this.ngOnInit();
       })

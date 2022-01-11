@@ -12,44 +12,44 @@ export class HospitalRegisterComponent implements OnInit {
 
   HospitallistModelObj: HospitallistModel = new HospitallistModel();
 
-  contactForm = new FormGroup({
+  hospitalForm = new FormGroup({
     
    
   })
 
 
   get hospitalname() {
-    return this.contactForm.get('hospitalname'); 
+    return this.hospitalForm.get('hospitalname'); 
   }
   
   get hospitalmobile(){
-    return this.contactForm.get('hospitalmobile')
+    return this.hospitalForm.get('hospitalmobile')
   }
   
   get hospitalemail() {
-    return this.contactForm.get('hospitalemail'); 
+    return this.hospitalForm.get('hospitalemail'); 
   }
   
   get hospitalregistration(){
-    return this.contactForm.get('hospitalregistration'); 
+    return this.hospitalForm.get('hospitalregistration'); 
   }
   
   get hospitaladdress(){
-    return this.contactForm.get('hospitaladdress'); 
+    return this.hospitalForm.get('hospitaladdress'); 
   }
   
   get hospitalstate(){
-    return this.contactForm.get('hospitalstate'); 
+    return this.hospitalForm.get('hospitalstate'); 
   }
   
   get hospitalcity(){
-    return this.contactForm.get('hospitalcity'); 
+    return this.hospitalForm.get('hospitalcity'); 
   }
   
  
   
   get hospitalpass(){
-    return this.contactForm.get('hospitalpass'); 
+    return this.hospitalForm.get('hospitalpass'); 
   }
   
   
@@ -60,14 +60,14 @@ export class HospitalRegisterComponent implements OnInit {
   
   
     onSubmit() {
-      console.log(this.contactForm.value);
+      console.log(this.hospitalForm.value);
     }
 
   constructor(private formbuilder: FormBuilder, private hospitallist: HospitallistService) { }
 
   ngOnInit(): void {
 
-    this.contactForm = this.formbuilder.group({
+    this.hospitalForm = this.formbuilder.group({
       hospitalname : new FormControl("",[Validators.required,Validators.minLength(3),Validators.pattern("^[a-z A-Z]+$")]),
       hospitalemail :  new FormControl("",[Validators.email,Validators.required]),
       hospitalmobile: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{10}$")]),
@@ -85,25 +85,25 @@ export class HospitalRegisterComponent implements OnInit {
     })
   }
 
-  postCustomerDetails(){
-    this.HospitallistModelObj.hospitalname = this.contactForm.value.hospitalname;
-    this.HospitallistModelObj.hospitalemail = this.contactForm.value.hospitalemail;
-    this.HospitallistModelObj.hospitalmobile = this.contactForm.value.hospitalmobile;
-    this.HospitallistModelObj.hospitalregistration = this.contactForm.value.hospitalregistration;
-    this.HospitallistModelObj.hospitaladdress = this.contactForm.value.hospitaladdress;
-    this.HospitallistModelObj.hospitalstate = this.contactForm.value.hospitalstate;
-    this.HospitallistModelObj.hospitalcity = this.contactForm.value.hospitalcity;
-    this.HospitallistModelObj.hospitalpass = this.contactForm.value.hospitalpass;
+  postHospitalDetails(){
+    this.HospitallistModelObj.hospitalname = this.hospitalForm.value.hospitalname;
+    this.HospitallistModelObj.hospitalemail = this.hospitalForm.value.hospitalemail;
+    this.HospitallistModelObj.hospitalmobile = this.hospitalForm.value.hospitalmobile;
+    this.HospitallistModelObj.hospitalregistration = this.hospitalForm.value.hospitalregistration;
+    this.HospitallistModelObj.hospitaladdress = this.hospitalForm.value.hospitaladdress;
+    this.HospitallistModelObj.hospitalstate = this.hospitalForm.value.hospitalstate;
+    this.HospitallistModelObj.hospitalcity = this.hospitalForm.value.hospitalcity;
+    this.HospitallistModelObj.hospitalpass = this.hospitalForm.value.hospitalpass;
     
   
 
-    this.hospitallist.postCust(this.HospitallistModelObj)
+    this.hospitallist.postHosp(this.HospitallistModelObj)
       .subscribe(res=>{
       console.log(res);
-      alert("Customer Added Successfully")
+      alert("Hospital Added Successfully")
       let ref = document.getElementById('cancel')
       ref?.click();
-      this.contactForm.reset();
+      this.hospitalForm.reset();
       
     },
     err=>{

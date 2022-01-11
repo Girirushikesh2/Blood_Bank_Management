@@ -9,7 +9,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let row of customerData">
+        <tr *ngFor="let row of requestData">
             <td>{{row.id}}</td>
             <td>{{row.hospitalregistration}}</td>
             <td>{{row.bloodgroup}}</td>
@@ -18,7 +18,7 @@
             <td>
                 <button type="button" class="btn btn-success " (click)="approve(row.id)">Approve</button>
                 <button type="button" class="btn btn-danger " (click)="reject(row.id)">Reject</button>
-                <button (click)="deleteCustomer(row)" class="btn btn-danger ">Delete</button>
+                <button (click)="deleteRequest(row)" class="btn btn-danger ">Delete</button>
             </td>
         </tr>
     </tbody>
