@@ -13,10 +13,7 @@ export class HospitalRegisterComponent implements OnInit {
   HospitallistModelObj: HospitallistModel = new HospitallistModel();
 
   contactForm = new FormGroup({
-    // firstName: new FormControl("",[Validators.required,Validators.minLength(3),Validators.pattern("^[a-zA-Z]+$")]),
-    // lastName: new FormControl("",[ Validators.required, Validators.minLength(3), Validators.pattern("^[a-zA-Z]+$")]),
-    // email: new FormControl("",[Validators.email,Validators.required]),
-    // mobile: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{10}$")]),
+    
    
   })
 
@@ -49,12 +46,10 @@ export class HospitalRegisterComponent implements OnInit {
     return this.contactForm.get('hospitalcity'); 
   }
   
+ 
+  
   get hospitalpass(){
     return this.contactForm.get('hospitalpass'); 
-  }
-  
-  get hospitalconpass(){
-    return this.contactForm.get('hospitalconpass'); 
   }
   
   
@@ -73,7 +68,7 @@ export class HospitalRegisterComponent implements OnInit {
   ngOnInit(): void {
 
     this.contactForm = this.formbuilder.group({
-      hospitalname : new FormControl("",[Validators.required,Validators.minLength(3),Validators.pattern("^[a-zA-Z]+$")]),
+      hospitalname : new FormControl("",[Validators.required,Validators.minLength(3),Validators.pattern("^[a-z A-Z]+$")]),
       hospitalemail :  new FormControl("",[Validators.email,Validators.required]),
       hospitalmobile: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{10}$")]),
       hospitalregistration: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{5}$")]),
@@ -81,7 +76,7 @@ export class HospitalRegisterComponent implements OnInit {
       hospitalstate:new FormControl("",[Validators.required]),
       hospitalcity:new FormControl("",[Validators.required]),
       hospitalpass:new FormControl("",[Validators.required]),
-      hospitalconpass:new FormControl("",[Validators.required]),
+     
       
      
 

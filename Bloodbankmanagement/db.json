@@ -16,9 +16,9 @@
     },
     {
       "id": 2,
-      "firstName": "Alpha",
-      "lastName": "beta",
-      "email": "alpha@gmail.com",
+      "firstName": "Mike",
+      "lastName": "Smith",
+      "email": "mike@gmail.com",
       "mobile": "1234567899",
       "age": "12",
       "gender": "Female",
@@ -32,58 +32,69 @@
   "hospitallist": [
     {
       "id": 3,
-      "hospitalname": "Hospitaltwo",
-      "hospitalemail": "hosp@gmail.com",
+      "hospitalname": "Saiyadri Hospital",
+      "hospitalemail": "saiyadri@gmail.com",
       "hospitalmobile": "1234567898",
       "hospitalregistration": "12345",
-      "hospitaladdress": "asdas sd",
+      "hospitaladdress": "JM road",
       "hospitalstate": "Maharashtra",
       "hospitalcity": "Pune",
       "hospitalpass": ""
     },
     {
       "id": 6,
-      "hospitalname": "This",
-      "hospitalemail": "asdsa@gmai",
-      "hospitalmobile": "1234567898",
+      "hospitalname": "More Hospital",
+      "hospitalemail": "morehosp@gmail.com",
+      "hospitalmobile": "9422245698",
       "hospitalregistration": "14785",
-      "hospitaladdress": "dsad",
+      "hospitaladdress": "Baner",
       "hospitalstate": "Maharashtra",
       "hospitalcity": "Pune",
-      "hospitalpass": "asda"
+      "hospitalpass": ""
     },
     {
       "id": 7,
-      "hospitalname": "More",
-      "hospitalemail": "sdasd@gmail.com",
-      "hospitalmobile": "1234567899",
+      "hospitalname": "AIIMS",
+      "hospitalemail": "aiims@gmail.com",
+      "hospitalmobile": "9512365478",
       "hospitalregistration": "12345",
-      "hospitaladdress": "asds sad ",
+      "hospitaladdress": "rajiv road",
       "hospitalstate": "Goa",
       "hospitalcity": "Pune",
-      "hospitalpass": "asda"
+      "hospitalpass": ""
     },
     {
       "id": 8,
-      "hospitalname": "Gore",
-      "hospitalemail": "abc@gmail.com",
-      "hospitalmobile": "1234567897",
+      "hospitalname": "Gayatri",
+      "hospitalemail": "gayatri@gmail.com",
+      "hospitalmobile": "7854785962",
       "hospitalregistration": "12345",
-      "hospitaladdress": "asdsd",
+      "hospitaladdress": "Kothrud",
+      "hospitalstate": "Maharashtra",
+      "hospitalcity": "Pune",
+      "hospitalpass": ""
+    },
+    {
+      "id": 9,
+      "hospitalname": "durgesh",
+      "hospitalemail": "durgesh@gmail.com",
+      "hospitalmobile": "1234567899",
+      "hospitalregistration": "11223",
+      "hospitaladdress": "JM road",
       "hospitalstate": "Maharashtra",
       "hospitalcity": "Pune",
       "hospitalpass": "123456"
     },
     {
-      "id": 9,
-      "hospitalname": "Rushikesh",
-      "hospitalemail": "rush@gmail.com",
-      "hospitalmobile": "1234456789",
-      "hospitalregistration": "11111",
-      "hospitaladdress": "asd dsd",
-      "hospitalstate": "Goa",
-      "hospitalcity": "Pune",
-      "hospitalpass": "123456"
+      "id": 10,
+      "hospitalname": "RG hosp",
+      "hospitalemail": "rg@gmail.com",
+      "hospitalmobile": "1234568798",
+      "hospitalregistration": "98765",
+      "hospitaladdress": "rahatgaon road",
+      "hospitalstate": "Maharashtra",
+      "hospitalcity": "Nagpur",
+      "hospitalpass": "12345"
     }
   ],
   "contact": [
@@ -93,7 +104,7 @@
       "contactlName": "Giri",
       "contactemail": "girirushikesh2@gmail.com",
       "contactmobile": "1234567899",
-      "contactmessage": " dsadj dsdsd sd sdsd "
+      "contactmessage": " Help me with the registration"
     }
   ],
   "adminlogin": [
@@ -161,12 +172,14 @@
   ],
   "stock": [
     {
-      "id": 1
-    },
-    {
       "id": 2,
       "bloodgroup": "A-",
       "bagquantity": "12"
+    },
+    {
+      "id": 3,
+      "bloodgroup": "A-",
+      "bagquantity": "20"
     }
   ],
   "gallery": [],
