@@ -5,18 +5,18 @@
     padding: 40px;
     left: 55%;
     background: hsla(205,46%,30%,1);
-    background: linear-gradient(90deg,rgb(143, 16, 216)0%,rgb(245, 162, 85)100%);
+    background: linear-gradient(90deg,rgb(199, 252, 168)0%,rgb(134, 252, 242)100%);
 
 }
 
 .card label,
 h6{
-    color: #fff;
+    color: black;
 }
 h1{
-    color: #fff;
+    color: black;
 }
 
 label{
-    color: #fff;
+    color: black;
 }

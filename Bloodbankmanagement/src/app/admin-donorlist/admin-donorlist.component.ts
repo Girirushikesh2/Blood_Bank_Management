@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { DonorService } from 'src/app/services/donor.service';
-import { CustomerModel } from './donor.model';
+import { DonorModel } from './donor.model';
 
 @Component({
   selector: 'app-admin-donorlist',
@@ -11,8 +11,8 @@ import { CustomerModel } from './donor.model';
 export class AdminDonorlistComponent implements OnInit {
 
   formValue !: FormGroup;
-  customerModelObj : CustomerModel = new CustomerModel();
-  customerData!:any;
+  DonorModelObj : DonorModel = new DonorModel();
+  donorData!:any;
   showAdd!:boolean;
   showUpdate !:boolean;
 
@@ -37,56 +37,56 @@ export class AdminDonorlistComponent implements OnInit {
 
 
     })
-    this.getAllCustomer();
+    this.getAllDonor();
   }
 
-  clickAddCust(){
+  clickAddDon(){
     this.formValue.reset();
     this.showAdd=true;
     this.showUpdate=false;
 
   }
 
-  postCustomerDetails(){
-    this.customerModelObj.firstName = this.formValue.value.firstName;
-    this.customerModelObj.lastName = this.formValue.value.lastName;
-    this.customerModelObj.email = this.formValue.value.email;
-    this.customerModelObj.mobile = this.formValue.value.mobile;
-    this.customerModelObj.age = this.formValue.value.age;
+  postDonorDetails(){
+    this.DonorModelObj.firstName = this.formValue.value.firstName;
+    this.DonorModelObj.lastName = this.formValue.value.lastName;
+    this.DonorModelObj.email = this.formValue.value.email;
+    this.DonorModelObj.mobile = this.formValue.value.mobile;
+    this.DonorModelObj.age = this.formValue.value.age;
     
-    this.customerModelObj.gender = this.formValue.value.gender;
-    this.customerModelObj.address = this.formValue.value.address;
-    this.customerModelObj.state = this.formValue.value.state;
-    this.customerModelObj.city = this.formValue.value.city;
-    this.customerModelObj.bloodgroup = this.formValue.value.bloodgroup;
-    this.customerModelObj.health = this.formValue.value.health;
+    this.DonorModelObj.gender = this.formValue.value.gender;
+    this.DonorModelObj.address = this.formValue.value.address;
+    this.DonorModelObj.state = this.formValue.value.state;
+    this.DonorModelObj.city = this.formValue.value.city;
+    this.DonorModelObj.bloodgroup = this.formValue.value.bloodgroup;
+    this.DonorModelObj.health = this.formValue.value.health;
     
 
-    this.donor.postCust(this.customerModelObj)
+    this.donor.postDon(this.DonorModelObj)
     .subscribe(res=>{
       console.log(res);
       alert("Customer Added Successfully")
       let ref = document.getElementById('cancel')
       ref?.click();
       this.formValue.reset();
-      this.getAllCustomer();
+      this.getAllDonor();
     },
     err=>{
       alert("Something went wrong")
     })
   }
 
-  getAllCustomer(){
-    this.donor.getCustomer()
+  getAllDonor(){
+    this.donor.getDonor()
     .subscribe(res=>{
-      this.customerData = res;
+      this.donorData = res;
     })
   }
-  deleteCustomer(row : any){
-    this.donor.deleteCustomer(row.id)
+  deleteDonor(row : any){
+    this.donor.deleteDonor(row.id)
     .subscribe(res=>{
-      alert("Customer Deleted")
-      this.getAllCustomer();
+      alert("Donor Deleted")
+      this.getAllDonor();
     })
   }
 
