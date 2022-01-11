@@ -15,20 +15,6 @@
       "health": "NA"
     },
     {
-      "id": 2,
-      "firstName": "Mike",
-      "lastName": "Smith",
-      "email": "mike@gmail.com",
-      "mobile": "1234567899",
-      "age": "12",
-      "gender": "Female",
-      "address": "asdsd sdsa sd ",
-      "state": "Maharashtra",
-      "city": "Mumbai",
-      "bloodgroup": "B+",
-      "health": "NA"
-    },
-    {
       "id": 3,
       "firstName": "Rutuja",
       "lastName": "Deore",
@@ -40,6 +26,20 @@
       "state": "Maharashtra",
       "city": "Pune",
       "bloodgroup": "O+",
+      "health": "NA"
+    },
+    {
+      "id": 4,
+      "firstName": "Abhay",
+      "lastName": "Kathole",
+      "email": "abhay@gmail.com",
+      "mobile": "9876543211",
+      "age": "21",
+      "gender": "Male",
+      "address": "sonal colony",
+      "state": "Maharashtra",
+      "city": "Nagpur",
+      "bloodgroup": "O-",
       "health": "NA"
     }
   ],
@@ -182,6 +182,14 @@
       "bloodgroup": "B+",
       "quantity": "50",
       "status": "pending"
+    },
+    {
+      "id": 14,
+      "hospitalname": "",
+      "hospitalregistration": "11223",
+      "bloodgroup": "B-",
+      "quantity": "20",
+      "status": "approved"
     }
   ],
   "stock": [
@@ -193,6 +201,11 @@
     {
       "id": 3,
       "bloodgroup": "A-",
+      "bagquantity": "20"
+    },
+    {
+      "id": 4,
+      "bloodgroup": "B+",
       "bagquantity": "20"
     }
   ],

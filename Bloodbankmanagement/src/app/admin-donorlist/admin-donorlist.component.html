@@ -20,7 +20,7 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let row of customerData">
+        <tr *ngFor="let row of donorData">
             <td>{{row.id}}</td>
             <td>{{row.firstName}}</td>
             <td>{{row.lastName}}</td>
@@ -37,7 +37,7 @@
             
             <td>
                 
-                <button (click)="deleteCustomer(row)" class="btn btn-danger ">Delete</button>
+                <button (click)="deleteDonor(row)" class="btn btn-danger ">Delete</button>
             </td>
         </tr>
     </tbody>

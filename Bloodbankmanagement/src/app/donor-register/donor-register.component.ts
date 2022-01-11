@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { DonorService } from '../services/donor.service';
-import { CustomerModel } from '../admin-donorlist/donor.model';
+import { DonorModel } from '../admin-donorlist/donor.model';
 
 @Component({
   selector: 'app-donor-register',
@@ -10,61 +10,54 @@ import { CustomerModel } from '../admin-donorlist/donor.model';
 })
 export class DonorRegisterComponent implements OnInit {
 
-  customerModelObj : CustomerModel = new CustomerModel();
+  DonorModelObj : DonorModel = new DonorModel();
 
-  contactForm = new FormGroup({
-    // firstName: new FormControl("",[Validators.required,Validators.minLength(3),Validators.pattern("^[a-zA-Z]+$")]),
-    // lastName: new FormControl("",[ Validators.required, Validators.minLength(3), Validators.pattern("^[a-zA-Z]+$")]),
-    // email: new FormControl("",[Validators.email,Validators.required]),
-    // mobile: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{10}$")]),
-    // location: new FormControl("",[Validators.required]),
-    // members: new FormControl("",[Validators.required]),
-    // startdate: new FormControl("",[Validators.required]),
-    // enddate: new FormControl("",[Validators.required]),
+  donorForm = new FormGroup({
+    
   })
 
 
 get firstName() {
-  return this.contactForm.get('firstName'); 
+  return this.donorForm.get('firstName'); 
 }
 
 get lastName() {
-  return this.contactForm.get('lastName'); 
+  return this.donorForm.get('lastName'); 
 }
 
 get email() {
-  return this.contactForm.get('email'); 
+  return this.donorForm.get('email'); 
 }
 
 
 get mobile(){
-  return this.contactForm.get('mobile')
+  return this.donorForm.get('mobile')
 }
 get age(){
-  return this.contactForm.get('age')
+  return this.donorForm.get('age')
 }
 
 get gender(){
-  return this.contactForm.get('gender')
+  return this.donorForm.get('gender')
 }
 
 get address(){
-  return this.contactForm.get('address')
+  return this.donorForm.get('address')
 }
 
 get state(){
-  return this.contactForm.get('state')
+  return this.donorForm.get('state')
 }
 get city(){
-  return this.contactForm.get('city')
+  return this.donorForm.get('city')
 }
 
 get bloodgroup(){
-  return this.contactForm.get('bloodgroup')
+  return this.donorForm.get('bloodgroup')
 }
 
 get health(){
-  return this.contactForm.get('health')
+  return this.donorForm.get('health')
 }
 
 
@@ -73,13 +66,13 @@ get health(){
 
 
   onSubmit() {
-    console.log(this.contactForm.value);
+    console.log(this.donorForm.value);
   }
 
   constructor(private formbuilder: FormBuilder, private donor : DonorService) { }
 
   ngOnInit(): void {
-    this.contactForm = this.formbuilder.group({
+    this.donorForm = this.formbuilder.group({
       firstName : new FormControl("",[Validators.required,Validators.minLength(3),Validators.pattern("^[a-zA-Z]+$")]),
       lastName :new FormControl("",[ Validators.required, Validators.minLength(3), Validators.pattern("^[a-zA-Z]+$")]),
       email :  new FormControl("",[Validators.email,Validators.required]),
@@ -99,28 +92,28 @@ get health(){
 
     })
   }
-  postCustomerDetails(){
-    this.customerModelObj.firstName = this.contactForm.value.firstName;
-    this.customerModelObj.lastName = this.contactForm.value.lastName;
-    this.customerModelObj.email = this.contactForm.value.email;
-    this.customerModelObj.mobile = this.contactForm.value.mobile;
-    this.customerModelObj.age = this.contactForm.value.age;
+  postDonorDetails(){
+    this.DonorModelObj.firstName = this.donorForm.value.firstName;
+    this.DonorModelObj.lastName = this.donorForm.value.lastName;
+    this.DonorModelObj.email = this.donorForm.value.email;
+    this.DonorModelObj.mobile = this.donorForm.value.mobile;
+    this.DonorModelObj.age = this.donorForm.value.age;
     
-    this.customerModelObj.gender = this.contactForm.value.gender;
-    this.customerModelObj.address = this.contactForm.value.address;
-    this.customerModelObj.state = this.contactForm.value.state;
-    this.customerModelObj.city = this.contactForm.value.city;
-    this.customerModelObj.bloodgroup = this.contactForm.value.bloodgroup;
-    this.customerModelObj.health = this.contactForm.value.health;
+    this.DonorModelObj.gender = this.donorForm.value.gender;
+    this.DonorModelObj.address = this.donorForm.value.address;
+    this.DonorModelObj.state = this.donorForm.value.state;
+    this.DonorModelObj.city = this.donorForm.value.city;
+    this.DonorModelObj.bloodgroup = this.donorForm.value.bloodgroup;
+    this.DonorModelObj.health = this.donorForm.value.health;
  
 
-    this.donor.postCust(this.customerModelObj)
+    this.donor.postDon(this.DonorModelObj)
       .subscribe(res=>{
       console.log(res);
-      alert("Customer Added Successfully")
+      alert("Donor Added Successfully")
       let ref = document.getElementById('cancel')
       ref?.click();
-      this.contactForm.reset();
+      this.donorForm.reset();
       
     },
     err=>{
