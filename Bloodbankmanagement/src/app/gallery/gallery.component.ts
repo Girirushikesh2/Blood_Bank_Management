@@ -14,65 +14,72 @@ export class GalleryComponent implements OnInit {
 
   pic:any =[
     {
-      src:"https://images.unsplash.com/photo-1536856136534-bb679c52a9aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      src:"assets/gallery/01.jpg",
       
-      thumb:"https://images.unsplash.com/photo-1536856136534-bb679c52a9aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      thumb:"assets/gallery/01.jpg",
 
     },
 
     {
-      src:"https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/03/06/798811-blood-donation-camp-01.jpg",
+      src:"assets/gallery/02.jpg",
       
-      thumb:"https://cdn.dnaindia.com/sites/default/files/styles/full/public/2019/03/06/798811-blood-donation-camp-01.jpg",
+      thumb:"assets/gallery/02.jpg",
 
     },
 
     {
-      src:"https://assets.telegraphindia.com/telegraph/2020/Sep/1600627511_21metblood_5col-3.jpg",
+      src:"assets/gallery/03.jpg",
       
-      thumb:"https://assets.telegraphindia.com/telegraph/2020/Sep/1600627511_21metblood_5col-3.jpg",
+      thumb:"assets/gallery/03.jpg",
 
     },
 
     {
-      src:"https://pin.it/2GA2IA9",
+      src:"assets/gallery/04.jpeg",
       
-      thumb:"https://pin.it/2GA2IA9",
+      thumb:"assets/gallery/04.jpeg",
 
     },
 
     {
-      src:"https://pin.it/5cpxRHG",
+      src:"assets/gallery/05.jpeg",
       
-      thumb:"https://pin.it/5cpxRHG",
+      thumb:"assets/gallery/05.jpeg",
 
     },
 
     {
-      src:"https://pin.it/6lqHDH1",
+      src:"assets/gallery/06.jpg",
       
-      thumb:"https://pin.it/6lqHDH1",
+      thumb:"assets/gallery/06.jpg",
 
     },
 
     {
-      src:"https://pin.it/1eOF1r2",
+      src:"assets/gallery/07.jpg",
       
-      thumb:"https://pin.it/1eOF1r2",
+      thumb:"assets/gallery/07.jpg",
 
     },
 
     {
-      src:"",
+      src:"assets/gallery/08.jpg",
       
-      thumb:"",
+      thumb:"assets/gallery/08.jpg",
 
     },
 
     {
-      src:"",
+      src:"assets/gallery/09.jpg",
       
-      thumb:"",
+      thumb:"assets/gallery/09.jpg",
+
+    },
+
+    {
+      src:"assets/gallery/10.jpg",
+      
+      thumb:"assets/gallery/10.jpg",
 
     },
                   
