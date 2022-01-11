@@ -90,49 +90,6 @@ export class AdminDonorlistComponent implements OnInit {
     })
   }
 
-  onEdit(row:any){
-    this.showAdd=false;
-    this.showUpdate=true;
-    this.customerModelObj.id = row.id;
-    this.formValue.controls['firstName'].setValue(row.firstName);
-    this.formValue.controls['lastName'].setValue(row.lastName);
-    this.formValue.controls['email'].setValue(row.email);
-    this.formValue.controls['mobile'].setValue(row.mobile);
-    this.formValue.controls['age'].setValue(row.age);
-    
-    this.formValue.controls['gender'].setValue(row.gender);
-    this.formValue.controls['address'].setValue(row.address);
-    this.formValue.controls['state'].setValue(row.state);
-    this.formValue.controls['city'].setValue(row.city);
-    this.formValue.controls['bloodgroup'].setValue(row.bloodgroup);
-    this.formValue.controls['health'].setValue(row.health);
-    
-    
-  }
-
-  updateCustomerDetails(){
-    this.customerModelObj.firstName = this.formValue.value.firstName;
-    this.customerModelObj.lastName = this.formValue.value.lastName;
-    this.customerModelObj.email = this.formValue.value.email;
-    this.customerModelObj.mobile = this.formValue.value.mobile;
-    this.customerModelObj.age = this.formValue.value.age;
-    
-    this.customerModelObj.gender = this.formValue.value.gender;
-    this.customerModelObj.address = this.formValue.value.address;
-    this.customerModelObj.state = this.formValue.value.state;
-    this.customerModelObj.city = this.formValue.value.city;
-    this.customerModelObj.bloodgroup = this.formValue.value.bloodgroup;
-    this.customerModelObj.health = this.formValue.value.health;
-    
-
-    this.donor.updateCustomer(this.customerModelObj, this.customerModelObj.id)
-    .subscribe(res=>{
-      alert("Updated successfully");
-      let ref = document.getElementById('cancel')
-      ref?.click();
-      this.formValue.reset();
-      this.getAllCustomer();
-    })
-  }
+ 
 
 }
