@@ -13,7 +13,7 @@
                     <div class="mb-3">
                         <label for="hospitalregistration" class="form-label">Registration no.</label>
                         <input formControlName="hospitalregistration" type="text" class="form-control" id="hospitalregistration" aria-describedby="emailHelp">
-                        <div id="hospitalregistration" class="form-text">We'll never share your registration no. with anyone else.</div>
+                        
                         <span class="text-danger" *ngIf="loginForm.controls['hospitalregistration'].dirty && loginForm.hasError('required','hospitalregistration')">*Email Id is required</span>
                     </div>
                     <div class="mb-3">
@@ -22,10 +22,10 @@
                         <span class="text-danger" *ngIf="loginForm.controls['hospitalpass'].dirty && loginForm.hasError('required','hospitalpass')">*Password is required</span>
                     </div>
                     
-                    <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>
+                    <button type="submit"  [disabled]="!loginForm.valid" class="btn btn-success d-grid mx-auto">Login</button>
                       
                 </form>
-                <a style="color: white; margin-top: 10px;" routerLink="/signup">New User? Click to signup!</a>
+                <a style="color: white; margin-top: 10px;" routerLink="/hospital-register">New User? Click to signup!</a>
             </div>
         </div>
     </div>

@@ -149,6 +149,14 @@
       "bloodgroup": "B+",
       "quantity": "25",
       "status": "rejected"
+    },
+    {
+      "id": 13,
+      "hospitalname": "",
+      "hospitalregistration": "11111",
+      "bloodgroup": "B+",
+      "quantity": "50",
+      "status": "pending"
     }
   ],
   "stock": [
@@ -161,6 +169,7 @@
       "bagquantity": "12"
     }
   ],
+  "gallery": [],
   "comments": [],
   "profile": {
     "name": "typicode"

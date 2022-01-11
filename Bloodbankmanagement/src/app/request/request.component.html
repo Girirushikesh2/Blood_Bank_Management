@@ -1,69 +1,69 @@
 
 <div class="container">
-    <h1>Request Blood </h1>
+  <div class="row">
+    <div class="col-md-6">
+      <div class="card">
+        <h1>Request Blood </h1>
     
-    <form class="row g-3" [formGroup]="requestform"  (ngSubmit)="onSubmit()">
-        <div class="row">
-            <div class="col-md-4 ">
-                <label for="hospitalregistration" class="form-label">Registration no</label>
-                <input type="text" class="form-control" id="hospitalregistration" formControlName="hospitalregistration">
+        <form class="row g-3" [formGroup]="requestform"  (ngSubmit)="onSubmit()">
+          <div class="row">
+            <div class="col-md-8 ">
+              <label for="hospitalregistration" class="form-label">Registration no</label>
+              <input type="text" class="form-control" id="hospitalregistration" formControlName="hospitalregistration">
             </div>
-        </div>
-                            
-        
-        <div class="row">
-            <div class="col-md-4 mt-4">
-                <label for="bloodgroup" class="form-label">Blood group</label>
-                <select class="form-select" id="bloodgroup" formControlName="bloodgroup">
-                  <option selected disabled value="">Choose...</option>
-                  <option>A+</option>
-                  <option>A-</option>
-                  <option>B+</option>
-                  <option>B-</option>
-                  <option>O+</option>
-                  <option>O-</option>
-                  <option>AB+</option>
-                  <option>AB-</option>
+          </div>                               
+            
+          <div class="row">
+            <div class="col-md-8 mt-4">
+              <label for="bloodgroup" class="form-label">Blood group</label>
+              <select class="form-select" id="bloodgroup" formControlName="bloodgroup">
+                <option selected disabled value="">Choose...</option>
+                <option>A+</option>
+                <option>A-</option>
+                <option>B+</option>
+                <option>B-</option>
+                <option>O+</option>
+                <option>O-</option>
+                <option>AB+</option>
+                <option>AB-</option>
                   
                   
-                </select>
-                <div>
-                  
-                </div>
-                  <div *ngIf="!bloodgroup?.valid && (bloodgroup?.dirty ||bloodgroup?.touched)" class="alert alert-danger">
-                      <div [hidden]="!bloodgroup?.errors?.['required']">
-                        bloodgroup is required.
-                      </div>                                         
-                  </div>
+              </select>
+                
+              <div *ngIf="!bloodgroup?.valid && (bloodgroup?.dirty ||bloodgroup?.touched)" class="alert alert-danger">
+                <div [hidden]="!bloodgroup?.errors?.['required']">
+                  bloodgroup is required.
+                </div>                                         
+              </div>
             </div>
 
-        </div>
-        <div class="row">
-            <div class="col-md-4 mt-4">
+          </div>
+            <div class="row">
+              <div class="col-md-8 mt-4">
                 <label for="quantity" class="form-label">Quantity (in bags)</label>
                 <input type="text" class="form-control" id="quantity" formControlName="quantity">
-                    <div *ngIf="!quantity?.valid && (quantity?.dirty ||quantity?.touched)" class="alert alert-danger">
-                      <div [hidden]="!quantity?.errors?.['required']">
-                           quantity  is required.
-                      </div>
-                      <div [hidden]="!quantity?.errors?.['pattern']">
-                            invalid quantity.
-                      </div>
-                                       
+                  <div *ngIf="!quantity?.valid && (quantity?.dirty ||quantity?.touched)" class="alert alert-danger">
+                    <div [hidden]="!quantity?.errors?.['required']">
+                      quantity  is required.
                     </div>
-                
-            </div>
+                    <div [hidden]="!quantity?.errors?.['pattern']">
+                      invalid quantity.
+                    </div>
+                                    
+                  </div>
+                  
+              </div>
 
-        </div>
-
+            </div>                                                                                  
+            
+          <div class="col-12">
+            <button class="btn btn-success d-grid mx-auto" [disabled]="!requestform.valid" (click)="postRequestDetails()" type="submit">Send Request</button>
+          </div>
+          
+        </form>
         
-
-                    
-                                                         
-        
-        <div class="col-12">
-          <button class="btn btn-primary" [disabled]="!requestform.valid" (click)="postRequestDetails()" type="submit">Submit</button>
-        </div>
-      
-    </form>
+      </div>
+    </div>
+  </div>
+    
 </div>

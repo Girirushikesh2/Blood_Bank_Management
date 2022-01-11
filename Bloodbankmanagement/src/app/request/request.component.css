@@ -1,0 +1,13 @@
+.card{
+    top: 30px;
+    border: none;
+    width: 500px;
+    padding: 40px;
+    left: 55%; 
+    margin-bottom: 50px;
+}
+
+.card h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
