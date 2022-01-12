@@ -30,6 +30,7 @@ import { FaqsComponent } from './faqs/faqs.component';
 import { KnowmoreComponent } from './knowmore/knowmore.component';
 import { AdminStockComponent } from './admin-stock/admin-stock.component';
 import {  LightboxModule } from 'ngx-lightbox';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,8 @@ import {  LightboxModule } from 'ngx-lightbox';
     GalleryComponent,
     FaqsComponent,
     KnowmoreComponent,
-    AdminStockComponent
+    AdminStockComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

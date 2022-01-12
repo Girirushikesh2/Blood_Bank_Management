@@ -4,8 +4,11 @@
             <div class="card">
                 <h1 class="mt-4">Hospital Registration</h1>
     
-                <form class="row g-3 justify-content-md-center " [formGroup]="hospitalForm"  (ngSubmit)="onSubmit()">
+                <form class="row g-3 justify-content-md-center " [formGroup]="hospitalForm"  (ngSubmit)="onSubmit()" id="formm">
+                    
+                   
                     <div class="row">
+                        
                         <div class="col-md-5 ">
                             <label for="hospitalname" class="form-label">Name of hospital</label>
                             <input type="text" class="form-control" id="hospitalname" formControlName="hospitalname">
@@ -181,6 +184,6 @@
         </div>
     </div>
 </div>
-
+<app-pagination></app-pagination>
 
 

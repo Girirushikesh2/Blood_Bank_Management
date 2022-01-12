@@ -109,6 +109,18 @@
       "hospitalstate": "Maharashtra",
       "hospitalcity": "Mumbai",
       "hospitalpass": "123456"
+    },
+    {
+      "id": 12,
+      "hospitalname": "Rushiekshq",
+      "hospitalemail": "sds@gmail",
+      "hospitalmobile": "1234567899",
+      "hospitalregistration": "11212",
+      "hospitaladdress": "giri@gmail.asds",
+      "hospitalstate": "Maharashtra",
+      "hospitalcity": "Pune",
+      "hospitalpass": "12345",
+      "toDate": null
     }
   ],
   "contact": [
