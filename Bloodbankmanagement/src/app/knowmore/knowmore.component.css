@@ -76,3 +76,9 @@
 .accordion-body{
     text-align: center;
 }
+
+.video1{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}

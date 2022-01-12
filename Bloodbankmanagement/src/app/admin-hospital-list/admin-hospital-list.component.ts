@@ -26,7 +26,9 @@ export class AdminHospitalListComponent implements OnInit {
       hospitaladdress:[''],
       hospitalstate:[''],
       hospitalcity:[''],
-      hospitalpass:['']
+      hospitalpass:[''],
+      
+
       
      
 

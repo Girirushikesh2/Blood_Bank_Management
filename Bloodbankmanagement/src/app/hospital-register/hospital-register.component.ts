@@ -11,7 +11,7 @@ import { HospitallistService } from 'src/app/services/hospitallist.service';
 export class HospitalRegisterComponent implements OnInit {
 
   HospitallistModelObj: HospitallistModel = new HospitallistModel();
-
+ 
   hospitalForm = new FormGroup({
     
    
@@ -56,6 +56,8 @@ export class HospitalRegisterComponent implements OnInit {
   
   
   
+  
+  
           
   
   
@@ -76,6 +78,7 @@ export class HospitalRegisterComponent implements OnInit {
       hospitalstate:new FormControl("",[Validators.required]),
       hospitalcity:new FormControl("",[Validators.required]),
       hospitalpass:new FormControl("",[Validators.required]),
+      
      
       
      
@@ -94,6 +97,7 @@ export class HospitalRegisterComponent implements OnInit {
     this.HospitallistModelObj.hospitalstate = this.hospitalForm.value.hospitalstate;
     this.HospitallistModelObj.hospitalcity = this.hospitalForm.value.hospitalcity;
     this.HospitallistModelObj.hospitalpass = this.hospitalForm.value.hospitalpass;
+   
     
   
 
