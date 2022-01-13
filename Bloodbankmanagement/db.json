@@ -109,18 +109,6 @@
       "hospitalstate": "Maharashtra",
       "hospitalcity": "Mumbai",
       "hospitalpass": "123456"
-    },
-    {
-      "id": 12,
-      "hospitalname": "Rushiekshq",
-      "hospitalemail": "sds@gmail",
-      "hospitalmobile": "1234567899",
-      "hospitalregistration": "11212",
-      "hospitaladdress": "giri@gmail.asds",
-      "hospitalstate": "Maharashtra",
-      "hospitalcity": "Pune",
-      "hospitalpass": "12345",
-      "toDate": null
     }
   ],
   "contact": [
@@ -149,14 +137,6 @@
       "status": "approved"
     },
     {
-      "id": 15,
-      "hospitalname": "",
-      "hospitalregistration": "14785",
-      "bloodgroup": "B-",
-      "quantity": "05",
-      "status": "approved"
-    },
-    {
       "id": 16,
       "hospitalname": "",
       "hospitalregistration": "14785",
@@ -171,33 +151,28 @@
       "bloodgroup": "B+",
       "quantity": "25",
       "status": "approved"
+    },
+    {
+      "id": 18,
+      "hospitalname": "",
+      "hospitalregistration": "14785",
+      "bloodgroup": "B-",
+      "quantity": "25",
+      "status": "rejected"
     }
   ],
   "stock": [
     {
       "id": 2,
-      "bloodgroup": "A-",
-      "bagquantity": "12"
-    },
-    {
-      "id": 3,
-      "bloodgroup": "A-",
-      "bagquantity": "20"
-    },
-    {
-      "id": 4,
-      "bloodgroup": "B+",
-      "bagquantity": "20"
-    },
-    {
-      "id": 5,
-      "bloodgroup": "B+",
-      "bagquantity": "25"
-    },
-    {
-      "id": 6,
-      "bloodgroup": "B-",
-      "bagquantity": "20"
+      "date": "2022-01-14",
+      "Ap": "34",
+      "An": "54",
+      "Bp": "43",
+      "Bn": "45",
+      "Op": "45",
+      "On": "45",
+      "ABp": "54",
+      "ABn": "54"
     }
   ],
   "gallery": [],

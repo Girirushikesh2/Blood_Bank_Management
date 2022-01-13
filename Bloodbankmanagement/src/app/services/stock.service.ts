@@ -9,28 +9,28 @@ export class StockService {
 
   constructor(private http : HttpClient) { }
 
-  postCust(data : any){
+  postSt(data : any){
     return this.http.post<any>("http://localhost:3000/stock",data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
-  getCustomer(){
+  getStock(){
     return this.http.get<any>("http://localhost:3000/stock")
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
-  updateCustomer(id:number, data:any){
+  updateStock(data:any, id:number){
     return this.http.put<any>("http://localhost:3000/stock/"+id,data)
     .pipe(map((res:any)=>{
       return res;
     }))
   }
 
-  deleteCustomer(id:number){
+  deleteStock(id:number){
     return this.http.delete<any>("http://localhost:3000/stock/"+id)
     .pipe(map((res:any)=>{
       return res;

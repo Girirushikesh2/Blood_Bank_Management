@@ -1,71 +1,151 @@
 <div class="container">
   <div class="row justify-content-md-center">
-    <div class="col-md-6">
+    <div class="col-md-10">
       <div class="card">
-        <h1 class="mt-3">Add stock</h1>
-        <form class="row g-3 justify-content-md-center" [formGroup]="stockform"  (ngSubmit)="onSubmit()">
+        <h1 class="mt-3">Add Blood stock</h1>
+        <form class="row g-3 text-center " [formGroup]="stockform"  (ngSubmit)="onSubmit()">
+          <div class="col-md-4 ms-5">
+            <input type="date" class="form-control" id="date" formControlName="date">
+                    <div *ngIf="!date?.valid && (date?.dirty ||date?.touched)" class="alert alert-danger">
+                      <div [hidden]="!date?.errors?.['required']">
+                            date is required.
+                      </div>
                       
-          <div class="row">
-              <div class="col-md-4 mt-4">
-                  <label for="bloodgroup" class="form-label">Blood group</label>
-                  <select class="form-select" id="bloodgroup" formControlName="bloodgroup">
-                    <option selected disabled value="">Choose...</option>
-                    <option>A+</option>
-                    <option>A-</option>
-                    <option>B+</option>
-                    <option>B-</option>
-                    <option>O+</option>
-                    <option>O-</option>
-                    <option>AB+</option>
-                    <option>AB-</option>
-                    
-                    
-                  </select>
-                  <div>
-                    
-                  </div>
-                    <div *ngIf="!bloodgroup?.valid && (bloodgroup?.dirty ||bloodgroup?.touched)" class="alert alert-danger">
-                        <div [hidden]="!bloodgroup?.errors?.['required']">
-                          bloodgroup is required.
-                        </div>                                         
+                                       
                     </div>
-              </div>
-
           </div>
 
-          <div class="row">
-              <div class="col-md-5 mt-4">
-                <label for="bagquantity" class="form-label">Quantity in bags</label>
-                <input type="text" class="form-control" id="bagquantity" formControlName="bagquantity">
-                <div *ngIf="!bagquantity?.valid && (bagquantity?.dirty ||bagquantity?.touched)" class="alert alert-danger">
-                  <div [hidden]="!bagquantity?.errors?.['required']">
-                        quantity is required.
-                  </div>
-                  <div [hidden]="!bagquantity?.errors?.['pattern']">
-                        invalid quantity number.
-                  </div>
-                                  
+          <div class="row justify-content-md-center">
+            <div class="col-md-4 mt-4">
+              <label for="Ap" class="form-label">A+</label>
+              <input type="text" class="form-control" id="Ap" formControlName="Ap">
+              <div *ngIf="!Ap?.valid && (Ap?.dirty ||Ap?.touched)" class="alert alert-danger">
+                <div [hidden]="!Ap?.errors?.['required']">
+                  quantity is required.
                 </div>
-                  
+                <div [hidden]="!Ap?.errors?.['pattern']">
+                  invalid quantity number.
+                </div>
+                              
               </div>
 
+            </div>
+            <div class="col-4 mt-4">
+              <label for="An" class="form-label">A-</label>
+              <input type="text" class="form-control" id="An" formControlName="An">
+              <div *ngIf="!An?.valid && (An?.dirty ||An?.touched)" class="alert alert-danger">
+                <div [hidden]="!An?.errors?.['required']">
+                  quantity is required.
+                </div>
+                <div [hidden]="!An?.errors?.['pattern']">
+                  invalid quantity number.
+                </div>
+                              
+              </div>
+
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-4 mt-4">
+              <label for="Bp" class="form-label">B+</label>
+              <input type="text" class="form-control" id="Bp" formControlName="Bp">
+              <div *ngIf="!Bp?.valid && (Bp?.dirty ||Bp?.touched)" class="alert alert-danger">
+                <div [hidden]="!Bp?.errors?.['required']">
+                  quantity is required.
+                </div>
+                <div [hidden]="!Bp?.errors?.['pattern']">
+                  invalid quantity number.
+                </div>
+                              
+              </div>
+
+            </div>
+            <div class="col-md-4 mt-4">
+              <label for="Bn" class="form-label">B-</label>
+              <input type="text" class="form-control" id="Bn" formControlName="Bn">
+              <div *ngIf="!Bn?.valid && (Bn?.dirty ||Bn?.touched)" class="alert alert-danger">
+                <div [hidden]="!Bn?.errors?.['required']">
+                  quantity is required.
+                </div>
+                <div [hidden]="!Bn?.errors?.['pattern']">
+                  invalid quantity number.
+                </div>
+                              
+              </div>
+
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-4 mt-4">
+              <label for="Op" class="form-label">O+</label>
+              <input type="text" class="form-control" id="Op" formControlName="Op">
+              <div *ngIf="!Op?.valid && (Op?.dirty ||Op?.touched)" class="alert alert-danger">
+                <div [hidden]="!Op?.errors?.['required']">
+                  quantity is required.
+                </div>
+                <div [hidden]="!Op?.errors?.['pattern']">
+                  invalid quantity number.
+                </div>
+                              
+              </div>
+
+            </div>
+            <div class="col-md-4 mt-4">
+              <label for="On" class="form-label">O-</label>
+              <input type="text" class="form-control" id="On" formControlName="On">
+              <div *ngIf="!On?.valid && (On?.dirty ||On?.touched)" class="alert alert-danger">
+                <div [hidden]="!On?.errors?.['required']">
+                  quantity is required.
+                </div>
+                <div [hidden]="!On?.errors?.['pattern']">
+                  invalid quantity number.
+                </div>
+                              
+              </div>
+
+            </div>
+          </div>
+          <div class="row justify-content-md-center">
+            <div class="col-md-4 mt-4">
+              <label for="ABp" class="form-label">AB+</label>
+              <input type="text" class="form-control" id="ABp" formControlName="ABp">
+              <div *ngIf="!ABp?.valid && (ABp?.dirty ||ABp?.touched)" class="alert alert-danger">
+                <div [hidden]="!ABp?.errors?.['required']">
+                  quantity is required.
+                </div>
+                <div [hidden]="!ABp?.errors?.['pattern']">
+                  invalid quantity number.
+                </div>
+                              
+              </div>
+
+            </div>
+            <div class="col-md-4 mt-4">
+              <label for="ABn" class="form-label">AB-</label>
+              <input type="text" class="form-control" id="ABn" formControlName="ABn">
+              <div *ngIf="!ABn?.valid && (ABn?.dirty ||ABn?.touched)" class="alert alert-danger">
+                <div [hidden]="!ABn?.errors?.['required']">
+                  quantity is required.
+                </div>
+                <div [hidden]="!ABn?.errors?.['pattern']">
+                  invalid quantity number.
+                </div>
+                              
+              </div>
+
+            </div>
           </div>
 
-                      
-                                                          
-          
-          <div class="col-3 justify-content-md-center mb-3 ">
+          <div class="d-grid gap-2 col-3 mx-auto mt-4 mb-3">
+            
             <button class="btn btn-success" [disabled]="!stockform.valid" (click)="postCustomerDetails()" type="submit">Add</button>
+            <button type="button"  (click)="updateStockDetails()" class="btn btn-primary">Update</button>
+                       
           </div>
-        
-        </form>
 
-             
-                  
-                  
-                  
-              
-
+        </form>                           
+                               
+                            
       </div>
     </div>
   </div>

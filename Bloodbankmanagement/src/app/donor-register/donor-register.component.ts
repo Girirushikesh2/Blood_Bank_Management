@@ -75,7 +75,7 @@ get health(){
     this.donorForm = this.formbuilder.group({
       firstName : new FormControl("",[Validators.required,Validators.minLength(3),Validators.pattern("^[a-zA-Z]+$")]),
       lastName :new FormControl("",[ Validators.required, Validators.minLength(3), Validators.pattern("^[a-zA-Z]+$")]),
-      email :  new FormControl("",[Validators.email,Validators.required]),
+      email :  new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,3}")]),
       mobile: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{10}$")]),
       age: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{2}$")]),
 
@@ -85,7 +85,7 @@ get health(){
       state:new FormControl("",[Validators.required]),
       city:new FormControl("",[Validators.required]),
       bloodgroup:new FormControl("",[Validators.required]),
-      health :new FormControl("",[ Validators.required, Validators.maxLength(15), Validators.pattern("^[a-zA-Z]+$")]),
+      health :new FormControl("",[ Validators.required, Validators.maxLength(15), Validators.pattern("^[a-z A-Z]+$")]),
       
 
 

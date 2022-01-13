@@ -11,31 +11,40 @@ import { StockService } from '../services/stock.service';
 export class AdminDashComponent implements OnInit {
   formValue !: FormGroup;
   StockModelObj : StockModel = new StockModel();
-  customerData!:any;
+  stockData!:any;
 
   constructor(private formbuilder: FormBuilder, private stock: StockService) { }
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
-      bloodgroup : [''],
-      bagquantity :[''],
+      id : [''],
+      date:[''],
+      Ap :[''],
+      An :[''],
+      Bp :[''],
+      Bn :[''],
+      Op :[''],
+      On :[''],
+      ABp :[''],
+      ABn :[''],
+
         
 
     })
-    this.getAllCustomer();
+    this.getAllStock();
   }
 
-  getAllCustomer(){
-    this.stock.getCustomer()
+  getAllStock(){
+    this.stock.getStock()
     .subscribe(res=>{
-      this.customerData = res;
+      this.stockData = res;
     })
   }
-  deleteCustomer(row : any){
-    this.stock.deleteCustomer(row.id)
+  deleteStock(row : any){
+    this.stock.deleteStock(row.id)
     .subscribe(res=>{
-      alert("Customer Deleted")
-      this.getAllCustomer();
+      alert("Stock Deleted")
+      this.getAllStock();
     })
   }
 
