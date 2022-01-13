@@ -10,15 +10,15 @@
                 <form [formGroup]="loginForm" (ngSubmit)="login()">
                     
                     <div class="mb-3 mt-3">
-                        <label for="hospitalregistration" class="form-label">Registration no.</label>
-                        <input formControlName="hospitalregistration" type="text" class="form-control" id="hospitalregistration" aria-describedby="emailHelp">
+                        <label for="HospitalId" class="form-label">Registration no.</label>
+                        <input formControlName="HospitalId" type="text" class="form-control" id="HospitalId" aria-describedby="emailHelp">
                         
-                        <span class="text-danger" *ngIf="loginForm.controls['hospitalregistration'].dirty && loginForm.hasError('required','hospitalregistration')">*Email Id is required</span>
+                        <span class="text-danger" *ngIf="loginForm.controls['HospitalId'].dirty && loginForm.hasError('required','HospitalId')">*Email Id is required</span>
                     </div>
                     <div class="mb-3">
-                        <label for="hospitalpass" class="form-label">Password</label>
-                        <input formControlName="hospitalpass" type="password" class="form-control" id="hospitalpass">
-                        <span class="text-danger" *ngIf="loginForm.controls['hospitalpass'].dirty && loginForm.hasError('required','hospitalpass')">*Password is required</span>
+                        <label for="Password" class="form-label">Password</label>
+                        <input formControlName="Password" type="password" class="form-control" id="Password">
+                        <span class="text-danger" *ngIf="loginForm.controls['Password'].dirty && loginForm.hasError('required','Password')">*Password is required</span>
                     </div>
                     
                     <button type="submit"  [disabled]="!loginForm.valid" class="btn btn-success d-grid mx-auto">Login</button>

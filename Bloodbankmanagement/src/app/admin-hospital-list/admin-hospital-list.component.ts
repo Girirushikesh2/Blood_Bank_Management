@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { HospitallistService } from 'src/app/services/hospitallist.service'; 
-import { HospitallistModel } from './hospital-list.model'; 
+import { Hospital } from './hospital-list.model'; 
 
 @Component({
   selector: 'app-admin-hospital-list',
@@ -11,7 +11,7 @@ import { HospitallistModel } from './hospital-list.model';
 export class AdminHospitalListComponent implements OnInit {
 
   formValue !: FormGroup;
-  HospitallistModelObj : HospitallistModel = new HospitallistModel();
+  HospitallistModelObj : Hospital = new Hospital();
   hospitalData!:any;
   
 
@@ -19,13 +19,13 @@ export class AdminHospitalListComponent implements OnInit {
 
   ngOnInit(): void {
     this.formValue = this.formbuilder.group({
-      hospitalname : [''],
-      hospitalemail : [''],
-      hospitalmobile: [''],
-      hospitalregistration:[''],
-      hospitaladdress:[''],
-      hospitalstate:[''],
-      hospitalcity:[''],
+      HospitalName : [''],
+      Email : [''],
+      PhoneNo: [''],
+      HospitalId:[''],
+      Address:[''],
+      State:[''],
+      City:[''],
       hospitalpass:[''],
       
 
@@ -41,13 +41,13 @@ export class AdminHospitalListComponent implements OnInit {
   
 
   postHospitalDetails(){
-    this.HospitallistModelObj.hospitalname = this.formValue.value.hospitalname;
-    this.HospitallistModelObj.hospitalemail = this.formValue.value.hospitalemail;
-    this.HospitallistModelObj.hospitalmobile = this.formValue.value.hospitalmobile;
-    this.HospitallistModelObj.hospitalregistration = this.formValue.value.hospitalregistration;
-    this.HospitallistModelObj.hospitaladdress = this.formValue.value.hospitaladdress;
-    this.HospitallistModelObj.hospitalstate = this.formValue.value.hospitalstate;
-    this.HospitallistModelObj.hospitalcity = this.formValue.value.hospitalcity;
+    this.HospitallistModelObj.HospitalName = this.formValue.value.HospitalName;
+    this.HospitallistModelObj.Email = this.formValue.value.Email;
+    this.HospitallistModelObj.PhoneNo = this.formValue.value.PhoneNo;
+    this.HospitallistModelObj.HospitalId = this.formValue.value.HospitalId;
+    this.HospitallistModelObj.Address = this.formValue.value.Address;
+    this.HospitallistModelObj.State = this.formValue.value.State;
+    this.HospitallistModelObj.City = this.formValue.value.City;
  
 
     this.hospitallist.postHosp(this.HospitallistModelObj)
@@ -81,27 +81,27 @@ export class AdminHospitalListComponent implements OnInit {
   onEdit(row:any){
     
     this.HospitallistModelObj.id = row.id;
-    this.formValue.controls['hospitalname'].setValue(row.hospitalname);
-    this.formValue.controls['hospitalemail'].setValue(row.hospitalemail);
-    this.formValue.controls['hospitalmobile'].setValue(row.hospitalmobile);
-    this.formValue.controls['hospitalregistration'].setValue(row.hospitalregistration);
-    this.formValue.controls['hospitaladdress'].setValue(row.hospitaladdress);
-    this.formValue.controls['hospitalstate'].setValue(row.hospitalstate);
-    this.formValue.controls['hospitalcity'].setValue(row.hospitalcity);
+    this.formValue.controls['HospitalName'].setValue(row.HospitalName);
+    this.formValue.controls['Email'].setValue(row.Email);
+    this.formValue.controls['PhoneNo'].setValue(row.PhoneNo);
+    this.formValue.controls['HospitalId'].setValue(row.HospitalId);
+    this.formValue.controls['Address'].setValue(row.Address);
+    this.formValue.controls['State'].setValue(row.State);
+    this.formValue.controls['City'].setValue(row.City);
     
  
     
   }
 
   updateHospitalDetails(){
-    this.HospitallistModelObj.hospitalname = this.formValue.value.hospitalname;
+    this.HospitallistModelObj.HospitalName = this.formValue.value.HospitalName;
    
-    this.HospitallistModelObj.hospitalemail = this.formValue.value.hospitalemail;
-    this.HospitallistModelObj.hospitalmobile = this.formValue.value.hospitalmobile;
-    this.HospitallistModelObj.hospitalregistration = this.formValue.value.hospitalregistration;
-    this.HospitallistModelObj.hospitaladdress = this.formValue.value.hospitaladdress;
-    this.HospitallistModelObj.hospitalstate = this.formValue.value.hospitalstate;
-    this.HospitallistModelObj.hospitalcity = this.formValue.value.hospitalcity;
+    this.HospitallistModelObj.Email = this.formValue.value.Email;
+    this.HospitallistModelObj.PhoneNo = this.formValue.value.PhoneNo;
+    this.HospitallistModelObj.HospitalId = this.formValue.value.HospitalId;
+    this.HospitallistModelObj.Address = this.formValue.value.Address;
+    this.HospitallistModelObj.State = this.formValue.value.State;
+    this.HospitallistModelObj.City = this.formValue.value.City;
         
     this.hospitallist.updateHospital(this.HospitallistModelObj, this.HospitallistModelObj.id)
     .subscribe(res=>{

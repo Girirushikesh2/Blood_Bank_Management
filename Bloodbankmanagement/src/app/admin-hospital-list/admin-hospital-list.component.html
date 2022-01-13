@@ -21,14 +21,14 @@
     <tbody>
         <tr *ngFor="let row of hospitalData">
             <td>{{row.id}}</td>
-            <td>{{row.hospitalname}}</td>
+            <td>{{row.HospitalName}}</td>
             
-            <td>{{row.hospitalemail}}</td>
-            <td>{{row.hospitalmobile}}</td>
-            <td>{{row.hospitalregistration}}</td>
-            <td>{{row.hospitaladdress}}</td>
-            <td>{{row.hospitalstate}}</td>
-            <td>{{row.hospitalcity}}</td>
+            <td>{{row.Email}}</td>
+            <td>{{row.PhoneNo}}</td>
+            <td>{{row.HospitalId}}</td>
+            <td>{{row.Address}}</td>
+            <td>{{row.State}}</td>
+            <td>{{row.City}}</td>
             
             
             <td>
@@ -51,36 +51,36 @@
         <div class="modal-body">
             <form [formGroup]="formValue">
                 <div class="mb-3">
-                  <label for="hospitalname" class="form-label">Hospital Name</label>
-                  <input type="text" formControlName="hospitalname" class="form-control" id="hospitalname" >
+                  <label for="HospitalName" class="form-label">Hospital Name</label>
+                  <input type="text" formControlName="HospitalName" class="form-control" id="HospitalName" >
                   
                 </div>
                 
     
                 <div class="mb-3">
-                    <label for="hospitalemail" class="form-label">Hospital Email ID</label>
-                    <input type="hospitalemail" formControlName="hospitalemail" class="form-control" id="hospitalemail">
+                    <label for="Email" class="form-label">Hospital Email ID</label>
+                    <input type="text" formControlName="Email" class="form-control" id="Email">
                 </div>
     
                 <div class="mb-3">
-                    <label for="hospitalmobile" class="form-label">Hospital Mobile Number</label>
-                    <input type="text" formControlName="hospitalmobile" class="form-control" id="hospitalmobile">
+                    <label for="PhoneNo" class="form-label">Hospital Mobile Number</label>
+                    <input type="text" formControlName="PhoneNo" class="form-control" id="PhoneNo">
                 </div>
                 <div class="mb-3">
-                    <label for="hospitalregistration" class="form-label">Hospital Registration Number</label>
-                    <input type="text" formControlName="hospitalregistration" class="form-control" id="hospitalregistration">
+                    <label for="HospitalId" class="form-label">Hospital Registration Number</label>
+                    <input type="text" formControlName="HospitalId" class="form-control" id="HospitalId">
                 </div>
                 <div class="mb-3">
-                    <label for="hospitaladdress" class="form-label">Hospital Address</label>
-                    <input type="text" formControlName="hospitaladdress" class="form-control" id="hospitaladdress">
+                    <label for="Address" class="form-label">Hospital Address</label>
+                    <input type="text" formControlName="Address" class="form-control" id="Address">
                 </div>
                 <div class="mb-3">
-                    <label for="hospitalstate" class="form-label">Hospital State</label>
-                    <input type="text" formControlName="hospitalstate" class="form-control" id="hospitalstate">
+                    <label for="State" class="form-label">Hospital State</label>
+                    <input type="text" formControlName="State" class="form-control" id="State">
                 </div>
                 <div class="mb-3">
-                    <label for="hospitalcity" class="form-label">Hospital city</label>
-                    <input type="text" formControlName="hospitalcity" class="form-control" id="hospitalcity">
+                    <label for="City" class="form-label">Hospital city</label>
+                    <input type="text" formControlName="City" class="form-control" id="City">
                 </div>
                                     
             </form>

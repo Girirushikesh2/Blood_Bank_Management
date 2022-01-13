@@ -26,8 +26,8 @@ export class AdminHospitalRequestComponent implements OnInit {
       console.log(this.info);
     })
     this.formValue = this.formbuilder.group({
-      hospitalname : [''],
-      hospitalregistration:[''],
+      
+      HospitalId:[''],
       bloodbank:[''],
       quantity:[''],
       status:[''],

@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {  FormGroup, Validators, FormBuilder } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { HospitallistModel } from '../admin-hospital-list/hospital-list.model';
+import { Hospital } from '../admin-hospital-list/hospital-list.model';
 import { HospitallistService } from '../services/hospitallist.service';
 
 
@@ -14,7 +14,7 @@ import { HospitallistService } from '../services/hospitallist.service';
 })
 export class UserLoginComponent implements OnInit {
 
-  HospitallistModelObj : HospitallistModel = new HospitallistModel();
+  HospitallistModelObj : Hospital = new Hospital();
 
   Model:any={};
   
@@ -23,8 +23,8 @@ export class UserLoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.loginForm = this.formBuilder.group({
-      hospitalregistration:['',Validators.required],
-      hospitalpass:['',Validators.required],
+      HospitalId:['',Validators.required],
+      Password:['',Validators.required],
     })
   }
 
@@ -32,14 +32,14 @@ export class UserLoginComponent implements OnInit {
     this.http.get<any>("http://localhost:3000/hospitallist")
     .subscribe(res=>{
       const user=res.find((a:any)=>{
-        return a.hospitalregistration === this.loginForm.value.hospitalregistration && a.hospitalpass === this.loginForm.value.hospitalpass
+        return a.HospitalId === this.loginForm.value.HospitalId && a.Password === this.loginForm.value.Password
       });
       if(user){
         alert("Login Success");
         
         this.loginForm.reset();
-        sessionStorage.setItem('hospitalregistration',this.HospitallistModelObj.hospitalregistration)
-        console.log(this.HospitallistModelObj.hospitalregistration)
+        sessionStorage.setItem('HospitalId',this.HospitallistModelObj.HospitalId)
+        console.log(this.HospitallistModelObj.HospitalId)
         this.Service.subject.next(true);
         this.router.navigate(['/home'])
       }else{

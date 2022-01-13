@@ -9,15 +9,15 @@
                 <form [formGroup]="loginForm" (ngSubmit)="login()">
                     
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        <label for="AdminEmail" class="form-label">Email address</label>
+                        <input formControlName="AdminEmail" type="email" class="form-control" id="AdminEmail" aria-describedby="emailHelp">
                         
-                        <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email Id is required</span>
+                        <span class="text-danger" *ngIf="loginForm.controls['AdminEmail'].dirty && loginForm.hasError('required','AdminEmail')">*Email Id is required</span>
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
-                        <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</span>
+                        <label for="AdminPassword" class="form-label">Password</label>
+                        <input formControlName="AdminPassword" type="password" class="form-control" id="AdminPassword">
+                        <span class="text-danger" *ngIf="loginForm.controls['AdminPassword'].dirty && loginForm.hasError('required','AdminPassword')">*Password is required</span>
                     </div>
                     
                     <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Login</button>

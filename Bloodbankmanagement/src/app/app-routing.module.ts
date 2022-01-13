@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AddadminComponent } from './addadmin/addadmin.component';
 import { AdminCampComponent } from './admin-camp/admin-camp.component';
 import { AdminContactComponent } from './admin-contact/admin-contact.component';
 import { AdminDashComponent } from './admin-dash/admin-dash.component';
@@ -10,6 +11,7 @@ import { AdminHospitalListComponent } from './admin-hospital-list/admin-hospital
 import { AdminHospitalRequestComponent } from './admin-hospital-request/admin-hospital-request.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminStockComponent } from './admin-stock/admin-stock.component';
+import { AdminformComponent } from './adminform/adminform.component';
 
 import { ContactComponent } from './contact/contact.component';
 import { DonorRegisterComponent } from './donor-register/donor-register.component';
@@ -57,6 +59,8 @@ const routes: Routes = [
     {path:'admin-contact',component:AdminContactComponent},
     {path:'admin-hospital-request',component:AdminHospitalRequestComponent},
     {path:'admin-stock',component:AdminStockComponent},
+    {path:'addadmin',component:AddadminComponent},
+    {path:'adminform',component:AdminformComponent}
     
 
 
