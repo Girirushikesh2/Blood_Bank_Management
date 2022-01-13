@@ -3,13 +3,18 @@
         <h1>Admin Dashboard</h1>
     </div>
     
-    <div class="row">
+    <div *ngFor="let row of stockData">
+
+      <div>
+        <h3>Updated on {{row.date}}</h3>
+      </div>
+      <div class="row">
     
         <div class="col-sm-3 text-center">
           <div class="card">
             <div class="card-body">
               <h1 class="card-title">A+</h1>
-              <p class="card-text">5</p>
+              <p class="card-text">{{row.Ap}}</p>
               
             </div>
           </div>
@@ -19,7 +24,7 @@
           <div class="card">
             <div class="card-body">
               <h1 class="card-title">B+</h1>
-              <p class="card-text">7</p>
+              <p class="card-text">{{row.Bp}}</p>
               
             </div>
           </div>
@@ -29,7 +34,7 @@
             <div class="card">
               <div class="card-body">
                 <h1 class="card-title">O+</h1>
-                <p class="card-text">10</p>
+                <p class="card-text">{{row.Op}}</p>
                 
               </div>
             </div>
@@ -39,7 +44,7 @@
             <div class="card">
                 <div class="card-body">
                 <h1 class="card-title">AB+</h1>
-                <p class="card-text">15</p>
+                <p class="card-text">{{row.ABp}}</p>
                 
                 </div>
             </div>
@@ -52,7 +57,7 @@
           <div class="card">
             <div class="card-body">
               <h1 class="card-title">A-</h1>
-              <p class="card-text">10</p>
+              <p class="card-text">{{row.An}}</p>
               
             </div>
           </div>
@@ -62,7 +67,7 @@
           <div class="card">
             <div class="card-body">
               <h1 class="card-title">B-</h1>
-              <p class="card-text">2</p>
+              <p class="card-text">{{row.Bn}}</p>
               
             </div>
           </div>
@@ -72,7 +77,7 @@
             <div class="card">
               <div class="card-body">
                 <h1 class="card-title">O-</h1>
-                <p class="card-text">13</p>
+                <p class="card-text">{{row.On}}</p>
                 
               </div>
             </div>
@@ -82,7 +87,7 @@
             <div class="card">
                 <div class="card-body">
                 <h1 class="card-title">AB-</h1>
-                <p class="card-text">11</p>
+                <p class="card-text">{{row.ABn}}</p>
                 
                 </div>
             </div>
@@ -133,6 +138,10 @@
             </div>
         </div>
     </div>
+
+    </div>
+    
+    
     
     
     
@@ -143,9 +152,17 @@
   <thead>
       <tr>
           <th scope="col">ID</th>
-          <th scope="col">Blood group</th>
+          <th scope="col">Date</th>
+          <th scope="col">A+</th>
+          <th scope="col">A-</th>
+          <th scope="col">B+</th>
+          <th scope="col">B-</th>
+          <th scope="col">O+</th>
+          <th scope="col">O-</th>
+          <th scope="col">AB+</th>
+          <th scope="col">AB-</th>
           
-          <th scope="col">Quantity</th>
+         
          
           
           
@@ -154,14 +171,21 @@
       </tr>
   </thead>
   <tbody>
-      <tr *ngFor="let row of customerData">
+      <tr *ngFor="let row of stockData">
           <td>{{row.id}}</td>
-          <td>{{row.bloodgroup}}</td>
-          <td>{{row.bagquantity}}</td>
+          <td>{{row.date}}</td>
+          <td>{{row.Ap}}</td>
+          <td>{{row.An}}</td>
+          <td>{{row.Bp}}</td>
+          <td>{{row.Bn}}</td>
+          <td>{{row.Op}}</td>
+          <td>{{row.On}}</td>
+          <td>{{row.ABp}}</td>
+          <td>{{row.ABn}}</td>
           
           
           <td>
-            <button (click)="deleteCustomer(row)" class="btn btn-danger ">Delete</button>
+            <button (click)="deleteStock(row)" class="btn btn-danger ">Delete</button>
           </td>
       </tr>
   </tbody>

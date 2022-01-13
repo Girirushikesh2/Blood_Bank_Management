@@ -17,3 +17,10 @@ h1{
 i{
     margin-left: 60px;
 }
+
+.card{
+    
+    
+    background: linear-gradient(90deg,rgb(199, 252, 168)0%,rgb(134, 252, 242)100%);
+
+}
