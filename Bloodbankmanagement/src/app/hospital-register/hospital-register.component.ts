@@ -70,7 +70,7 @@ export class HospitalRegisterComponent implements OnInit {
   ngOnInit(): void {
 
     this.hospitalForm = this.formbuilder.group({
-      hospitalname : new FormControl("",[Validators.required,Validators.minLength(3),Validators.pattern("^[a-z A-Z]+$")]),
+      hospitalname : new FormControl("",[Validators.required,Validators.minLength(5),Validators.pattern("^[a-z A-Z]+$")]),
       hospitalemail :  new FormControl("",[Validators.email,Validators.required]),
       hospitalmobile: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{10}$")]),
       hospitalregistration: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{5}$")]),

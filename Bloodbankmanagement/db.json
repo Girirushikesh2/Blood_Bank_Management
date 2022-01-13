@@ -141,61 +141,6 @@
   ],
   "request": [
     {
-      "id": 7,
-      "hospitalname": "",
-      "hospitalregistration": "12345",
-      "bloodgroup": "A+",
-      "quantity": "13"
-    },
-    {
-      "id": 8,
-      "hospitalname": "",
-      "hospitalregistration": "12354",
-      "bloodgroup": "B+",
-      "quantity": "15",
-      "status": "approved"
-    },
-    {
-      "id": 9,
-      "hospitalname": "",
-      "hospitalregistration": "12345",
-      "bloodgroup": "B+",
-      "quantity": "50",
-      "status": "pending"
-    },
-    {
-      "id": 10,
-      "hospitalname": "",
-      "hospitalregistration": "11111",
-      "bloodgroup": "A-",
-      "quantity": "12",
-      "status": "pending"
-    },
-    {
-      "id": 11,
-      "hospitalname": "",
-      "hospitalregistration": "12345",
-      "bloodgroup": "B+",
-      "quantity": "12",
-      "status": "pending"
-    },
-    {
-      "id": 12,
-      "hospitalname": "",
-      "hospitalregistration": "11111",
-      "bloodgroup": "B+",
-      "quantity": "25",
-      "status": "rejected"
-    },
-    {
-      "id": 13,
-      "hospitalname": "",
-      "hospitalregistration": "11111",
-      "bloodgroup": "B+",
-      "quantity": "50",
-      "status": "pending"
-    },
-    {
       "id": 14,
       "hospitalname": "",
       "hospitalregistration": "11223",
@@ -209,7 +154,7 @@
       "hospitalregistration": "14785",
       "bloodgroup": "B-",
       "quantity": "05",
-      "status": "rejected"
+      "status": "approved"
     },
     {
       "id": 16,
@@ -218,6 +163,14 @@
       "bloodgroup": "B-",
       "quantity": "20",
       "status": "rejected"
+    },
+    {
+      "id": 17,
+      "hospitalname": "",
+      "hospitalregistration": "14785",
+      "bloodgroup": "B+",
+      "quantity": "25",
+      "status": "approved"
     }
   ],
   "stock": [
@@ -234,6 +187,16 @@
     {
       "id": 4,
       "bloodgroup": "B+",
+      "bagquantity": "20"
+    },
+    {
+      "id": 5,
+      "bloodgroup": "B+",
+      "bagquantity": "25"
+    },
+    {
+      "id": 6,
+      "bloodgroup": "B-",
       "bagquantity": "20"
     }
   ],
