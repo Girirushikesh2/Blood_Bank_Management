@@ -40,4 +40,11 @@
 
   }
 
-  
+  h3{
+    text-align: center;
+    color: red;
+  }
+
+  .step p{
+    font-size: 20px;
+  }

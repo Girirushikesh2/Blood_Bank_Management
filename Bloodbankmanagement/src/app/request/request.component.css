@@ -5,6 +5,8 @@
     padding: 40px;
     left: 55%; 
     margin-bottom: 50px;
+    
+    background: linear-gradient(90deg,rgb(199, 252, 168)0%,rgb(134, 252, 242)100%);
 }
 
 .card h1{
