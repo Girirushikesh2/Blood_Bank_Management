@@ -1,0 +1,87 @@
+<div class="container">
+    <div class="row justify-content-md-center mt-3">
+        <div class="col-md-8">
+            <div class="card">
+                <h1 class="mt-4">Admin Registration</h1>
+    
+                <form class="row  justify-content-md-center" [formGroup]="AdminForm"  (ngSubmit)="onSubmit()" id="formm">
+                                       
+                    <div class="row">
+                        <div class="col-md-5 ">
+                            <label for="AdminName" class="form-label">Name </label>
+                            <input type="text" class="form-control" id="AdminName" formControlName="AdminName">
+                            <div *ngIf="!AdminName?.valid && (AdminName?.dirty ||AdminName?.touched)" class="alert alert-danger">
+                                <div [hidden]="!AdminName?.errors?.['required']">
+                                    Admin Name is required.
+                                </div> 
+                                <div [hidden]="!AdminName?.errors?.['pattern']">
+                                    Only characters are allowed.
+                                </div> 
+                                <div [hidden]="!AdminName?.errors?.['minlength']">
+                                    Min length is 5.
+                                </div> 
+                            </div>
+                            
+                        </div>
+
+                    </div>                     
+                    
+
+                                    
+                   <div class="row">
+                    <div class="col-md-5 mt-4">
+                        <label for="AdminEmail" class="form-label"> email</label>
+                        <input type="text" class="form-control" id="AdminEmail" formControlName="AdminEmail">
+                        <div *ngIf="!AdminEmail?.valid && (AdminEmail?.dirty ||AdminEmail?.touched)" class="alert alert-danger">
+                            <div [hidden]="!AdminEmail?.errors?.['required']">
+                                email is required.
+                            </div>
+                            <div [hidden]="!AdminEmail?.errors?.['pattern']">
+                                    Invalid email id
+                            </div> 
+                                            
+                            </div>
+                        
+                    </div>
+
+                   </div>
+
+                    
+
+                   
+
+
+                    <div class="row">
+                        <div class="col-md-5 mt-4">
+                            <label for="AdminPassword" class="form-label">Enter Password</label>
+                            <input type="password" class="form-control" id="AdminPassword" formControlName="AdminPassword">
+                            <div *ngIf="!AdminPassword?.valid && (AdminPassword?.dirty ||AdminPassword?.touched)" class="alert alert-danger">
+                                <div [hidden]="!AdminPassword?.errors?.['required']">
+                                    Password is required.
+                                </div>
+                                <div [hidden]="!AdminPassword?.errors?.['Password']">
+                                        Invalid Password
+                                </div> 
+                                                
+                                </div>
+                            
+                        </div>
+
+                    </div>
+                                
+                           
+                                                                                
+                    
+                    <div class="col-3 justify-content-md-center mb-3">
+                    <button class="btn btn-primary" [disabled]="!AdminForm.valid" (click)="postAdminDetails()" type="submit">Submit</button>
+                    </div>
+                
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

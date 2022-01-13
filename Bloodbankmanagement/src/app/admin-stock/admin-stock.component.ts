@@ -106,41 +106,6 @@ export class AdminStockComponent implements OnInit {
       alert("Something went wrong")
     })
   }
-  onEdit(row:any){
-    
-    this.StockModelObj.id = row.id;
-    this.stockform.controls['Ap'].setValue(row.Ap);
-    this.stockform.controls['An'].setValue(row.An);
-    this.stockform.controls['Bp'].setValue(row.Bp);
-    this.stockform.controls['Bn'].setValue(row.Bn);
-    this.stockform.controls['Op'].setValue(row.Op);
-    this.stockform.controls['On'].setValue(row.Pn);
-    this.stockform.controls['ABp'].setValue(row.ABp);
-    this.stockform.controls['ABn'].setValue(row.ABn);
-    this.stockform.controls['date'].setValue(row.date);
-    
- 
-    
-  }
 
-  updateStockDetails(){
-    this.StockModelObj.Ap = this.stockform.value.Ap;
-    this.StockModelObj.An = this.stockform.value.An;
-    this.StockModelObj.Bp = this.stockform.value.Bp;
-    this.StockModelObj.Bn = this.stockform.value.Bn;
-    this.StockModelObj.Op = this.stockform.value.Op;
-    this.StockModelObj.On = this.stockform.value.On;
-    this.StockModelObj.ABp = this.stockform.value.ABp;
-    this.StockModelObj.ABn = this.stockform.value.ABn;
-        
-    this.stock.updateStock(this.StockModelObj, this.StockModelObj.id)
-    .subscribe(res=>{
-      alert("Updated successfully");
-      let ref = document.getElementById('cancel')
-      ref?.click();
-      this.stockform.reset();
-      
-    })
-  }
 
 }

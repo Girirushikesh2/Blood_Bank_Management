@@ -10,16 +10,16 @@
                     <div class="row">
                         
                         <div class="col-md-5 ">
-                            <label for="hospitalname" class="form-label">Name of hospital</label>
-                            <input type="text" class="form-control" id="hospitalname" formControlName="hospitalname">
-                            <div *ngIf="!hospitalname?.valid && (hospitalname?.dirty ||hospitalname?.touched)" class="alert alert-danger">
-                                <div [hidden]="!hospitalname?.errors?.['required']">
+                            <label for="HospitalName" class="form-label">Name of hospital</label>
+                            <input type="text" class="form-control" id="HospitalName" formControlName="HospitalName">
+                            <div *ngIf="!HospitalName?.valid && (HospitalName?.dirty ||HospitalName?.touched)" class="alert alert-danger">
+                                <div [hidden]="!HospitalName?.errors?.['required']">
                                     Hospital Name is required.
                                 </div> 
-                                <div [hidden]="!hospitalname?.errors?.['pattern']">
+                                <div [hidden]="!HospitalName?.errors?.['pattern']">
                                     Only characters are allowed.
                                 </div> 
-                                <div [hidden]="!hospitalname?.errors?.['minlength']">
+                                <div [hidden]="!HospitalName?.errors?.['minlength']">
                                     Min length is 5.
                                 </div> 
                             </div>
@@ -28,13 +28,13 @@
 
                         
                         <div class="col-md-5 ">
-                            <label for="hospitalmobile" class="form-label">Hospital mobile no.</label>
-                            <input type="text" class="form-control" id="hospitalmobile" formControlName="hospitalmobile">
-                                <div *ngIf="!hospitalmobile?.valid && (hospitalmobile?.dirty ||hospitalmobile?.touched)" class="alert alert-danger">
-                                    <div [hidden]="!hospitalmobile?.errors?.['required']">
+                            <label for="PhoneNo" class="form-label">Hospital mobile no.</label>
+                            <input type="text" class="form-control" id="PhoneNo" formControlName="PhoneNo">
+                                <div *ngIf="!PhoneNo?.valid && (PhoneNo?.dirty ||PhoneNo?.touched)" class="alert alert-danger">
+                                    <div [hidden]="!PhoneNo?.errors?.['required']">
                                         mobile number is required.
                                     </div>
-                                    <div [hidden]="!hospitalmobile?.errors?.['pattern']">
+                                    <div [hidden]="!PhoneNo?.errors?.['pattern']">
                                         invalid mobile number.
                                     </div>
                                                     
@@ -52,13 +52,13 @@
 
                     <div class="row">
                         <div class="col-md-5 mt-4">
-                            <label for="hospitalemail" class="form-label">Hospital email</label>
-                            <input type="text" class="form-control" id="hospitalemail" formControlName="hospitalemail">
-                            <div *ngIf="!hospitalemail?.valid && (hospitalemail?.dirty ||hospitalemail?.touched)" class="alert alert-danger">
-                                <div [hidden]="!hospitalemail?.errors?.['required']">
+                            <label for="Email" class="form-label">Hospital email</label>
+                            <input type="text" class="form-control" id="Email" formControlName="Email">
+                            <div *ngIf="!Email?.valid && (Email?.dirty ||Email?.touched)" class="alert alert-danger">
+                                <div [hidden]="!Email?.errors?.['required']">
                                     email is required.
                                 </div>
-                                <div [hidden]="!hospitalemail?.errors?.['email']">
+                                <div [hidden]="!Email?.errors?.['pattern']">
                                         Invalid email id
                                 </div> 
                                                 
@@ -70,13 +70,13 @@
 
                     <div class="row">
                         <div class="col-md-5 mt-4 ">
-                            <label for="hospitalregistration" class="form-label">Five digit hospital registration no.</label>
-                            <input type="text" class="form-control" id="hospitalregistration" formControlName="hospitalregistration">
-                                <div *ngIf="!hospitalregistration?.valid && (hospitalregistration?.dirty ||hospitalregistration?.touched)" class="alert alert-danger">
-                                    <div [hidden]="!hospitalregistration?.errors?.['required']">
+                            <label for="HospitalId" class="form-label">Five digit hospital registration no.</label>
+                            <input type="text" class="form-control" id="HospitalId" formControlName="HospitalId">
+                                <div *ngIf="!HospitalId?.valid && (HospitalId?.dirty ||HospitalId?.touched)" class="alert alert-danger">
+                                    <div [hidden]="!HospitalId?.errors?.['required']">
                                         Hospital registration no. is required.
                                     </div>
-                                    <div [hidden]="!hospitalregistration?.errors?.['pattern']">
+                                    <div [hidden]="!HospitalId?.errors?.['pattern']">
                                         invalid registration number.
                                     </div>
                                                     
@@ -87,16 +87,16 @@
 
                     <div class="row">
                         <div class="col-md-5 mt-4">
-                            <label for="hospitaladdress" class="form-label">Address</label>
-                            <input type="text" class="form-control" id="hospitaladdress" formControlName="hospitaladdress">
-                                <div *ngIf="!hospitaladdress?.valid && (hospitaladdress?.dirty ||hospitaladdress?.touched)" class="alert alert-danger">
-                                <div [hidden]="!hospitaladdress?.errors?.['required']">
+                            <label for="Address" class="form-label">Address</label>
+                            <input type="text" class="form-control" id="Address" formControlName="Address">
+                                <div *ngIf="!Address?.valid && (Address?.dirty ||Address?.touched)" class="alert alert-danger">
+                                <div [hidden]="!Address?.errors?.['required']">
                                     Address is required.
                                 </div>
-                                <div [hidden]="!hospitaladdress?.errors?.['minlength']">
+                                <div [hidden]="!Address?.errors?.['minlength']">
                                     Min length is 3 characters.
                                 </div> 
-                                <div [hidden]="!hospitaladdress?.errors?.['maxlength']">
+                                <div [hidden]="!Address?.errors?.['maxlength']">
                                         Max length is 25 characters.
                                 </div> 
                                 
@@ -109,8 +109,8 @@
 
                     <div class="row">
                         <div class="col-md-5 mt-4">
-                            <label for="hospitalstate" class="form-label">State</label>
-                            <select class="form-select" id="hospitalstate" formControlName="hospitalstate">
+                            <label for="State" class="form-label">State</label>
+                            <select class="form-select" id="State" formControlName="State">
                             <option selected disabled value="">Choose...</option>
                             <option>Maharashtra</option>
                             <option>Goa</option>
@@ -120,8 +120,8 @@
                             <div>
                             
                             </div>
-                            <div *ngIf="!hospitalstate?.valid && (hospitalstate?.dirty ||hospitalstate?.touched)" class="alert alert-danger">
-                                <div [hidden]="!hospitalstate?.errors?.['required']">
+                            <div *ngIf="!State?.valid && (State?.dirty ||State?.touched)" class="alert alert-danger">
+                                <div [hidden]="!State?.errors?.['required']">
                                     state is required.
                                 </div>                                         
                             </div>
@@ -131,8 +131,8 @@
 
                     <div class="row">
                         <div class="col-md-5 mt-4">
-                            <label for="hospitalcity" class="form-label">City</label>
-                            <select class="form-select" id="hospitalcity" formControlName="hospitalcity">
+                            <label for="City" class="form-label">City</label>
+                            <select class="form-select" id="City" formControlName="City">
                             <option selected disabled value="">Choose...</option>
                             <option>Pune</option>
                             <option>Mumbai</option>
@@ -144,8 +144,8 @@
                             <div>
                             
                             </div>
-                            <div *ngIf="!hospitalcity?.valid && (hospitalcity?.dirty ||hospitalcity?.touched)" class="alert alert-danger">
-                                <div [hidden]="!hospitalcity?.errors?.['required']">
+                            <div *ngIf="!City?.valid && (City?.dirty ||City?.touched)" class="alert alert-danger">
+                                <div [hidden]="!City?.errors?.['required']">
                                     city is required.
                                 </div>                                         
                             </div>
@@ -155,13 +155,13 @@
 
                     <div class="row">
                         <div class="col-md-5 mt-4">
-                            <label for="hospitalpass" class="form-label">Enter Password</label>
-                            <input type="password" class="form-control" id="hospitalpass" formControlName="hospitalpass">
-                            <div *ngIf="!hospitalpass?.valid && (hospitalpass?.dirty ||hospitalpass?.touched)" class="alert alert-danger">
-                                <div [hidden]="!hospitalpass?.errors?.['required']">
+                            <label for="Password" class="form-label">Enter Password</label>
+                            <input type="password" class="form-control" id="Password" formControlName="Password">
+                            <div *ngIf="!Password?.valid && (Password?.dirty ||Password?.touched)" class="alert alert-danger">
+                                <div [hidden]="!Password?.errors?.['required']">
                                     Password is required.
                                 </div>
-                                <div [hidden]="!hospitalpass?.errors?.['hospitalpass']">
+                                <div [hidden]="!Password?.errors?.['Password']">
                                         Invalid Password
                                 </div> 
                                                 

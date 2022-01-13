@@ -31,6 +31,8 @@ import { KnowmoreComponent } from './knowmore/knowmore.component';
 import { AdminStockComponent } from './admin-stock/admin-stock.component';
 import {  LightboxModule } from 'ngx-lightbox';
 import { PaginationComponent } from './pagination/pagination.component';
+import { AddadminComponent } from './addadmin/addadmin.component';
+import { AdminformComponent } from './adminform/adminform.component';
 
 @NgModule({
   declarations: [
@@ -59,7 +61,9 @@ import { PaginationComponent } from './pagination/pagination.component';
     FaqsComponent,
     KnowmoreComponent,
     AdminStockComponent,
-    PaginationComponent
+    PaginationComponent,
+    AddadminComponent,
+    AdminformComponent
   ],
   imports: [
     BrowserModule,

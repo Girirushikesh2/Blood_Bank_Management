@@ -29,8 +29,8 @@ export class RequestService {
     }))
   }
 
-  getstatus(hospitalregistration:string){
-    return this.http.get<any>("http://localhost:3000/request/"+hospitalregistration)
+  getstatus(HospitalId:string){
+    return this.http.get<any>("http://localhost:3000/request/"+HospitalId)
     .pipe(map((res:any)=>{
       return res;
     }))

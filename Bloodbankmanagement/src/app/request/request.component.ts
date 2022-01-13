@@ -21,8 +21,8 @@ export class RequestComponent implements OnInit {
     
   })
 
-  get hospitalregistration() {
-    return this.requestform.get('hospitalregistration'); 
+  get HospitalId() {
+    return this.requestform.get('HospitalId'); 
   }
     
   get bloodgroup() {
@@ -42,7 +42,7 @@ export class RequestComponent implements OnInit {
   ngOnInit(): void {
     this.requestform = this.formbuilder.group({
 
-      hospitalregistration:new FormControl("",[Validators.required,Validators.pattern("^[0-9]{5}$")]),
+      HospitalId:new FormControl("",[Validators.required,Validators.pattern("^[0-9]{5}$")]),
       bloodgroup :new FormControl("",[ Validators.required]),
       quantity :  new FormControl("",[Validators.required,Validators.pattern("^[0-9]{2}$")]),
       
@@ -53,7 +53,7 @@ export class RequestComponent implements OnInit {
 
   postRequestDetails(){
     
-    this.RequestModelObj.hospitalregistration = this.requestform.value.hospitalregistration;
+    this.RequestModelObj.HospitalId = this.requestform.value.HospitalId;
     this.RequestModelObj.bloodgroup = this.requestform.value.bloodgroup;
     this.RequestModelObj.quantity = this.requestform.value.quantity;
   

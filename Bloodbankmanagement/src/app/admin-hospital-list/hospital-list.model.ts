@@ -1,13 +1,14 @@
-export class HospitallistModel{
+export class Hospital{
     id : number =0;
-    hospitalname : string = '';
-    hospitalemail : string = '';
-    hospitalmobile : string = '';
-    hospitalregistration :string ='';
-    hospitaladdress :string ='';
-    hospitalstate :string ='';
-    hospitalcity :string ='';
-    hospitalpass : string='';
-    
+    HospitalName : string = '';
+    Email : string = '';
+    PhoneNo : string = '';
+    HospitalId :string ='';
+    Address :string ='';
+    State :string ='';
+    City :string ='';
+    Password : string='';
+    CreatedOn!: Date;
+    UpdatedOn !: Date;
     
 }

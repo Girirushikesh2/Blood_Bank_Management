@@ -41,74 +41,55 @@
       "city": "Nagpur",
       "bloodgroup": "O-",
       "health": "NA"
+    },
+    {
+      "id": 5,
+      "firstName": "Testone",
+      "lastName": "one",
+      "email": "one@gmail.com",
+      "mobile": "1234567899",
+      "age": "24",
+      "gender": "Female",
+      "address": "dfdf",
+      "state": "Maharashtra",
+      "city": "Pune",
+      "bloodgroup": "A+",
+      "health": "NA"
     }
   ],
   "hospitallist": [
     {
+      "id": 2,
+      "HospitalName": "Gore Hospital",
+      "Email": "gore@gmail.com",
+      "PhoneNo": "9874587458",
+      "HospitalId": "12345",
+      "Address": "JM road",
+      "State": "Maharashtra",
+      "City": "Pune",
+      "Password": "123456"
+    },
+    {
       "id": 3,
-      "hospitalname": "Saiyadri Hospital",
-      "hospitalemail": "saiyadri@gmail.com",
-      "hospitalmobile": "1234567898",
-      "hospitalregistration": "12345",
-      "hospitaladdress": "JM road",
-      "hospitalstate": "Maharashtra",
-      "hospitalcity": "Pune",
-      "hospitalpass": ""
+      "HospitalName": "Durgesh Hospital",
+      "Email": "durgesh@gmail.com",
+      "PhoneNo": "8845784512",
+      "HospitalId": "88888",
+      "Address": "Kothrud ",
+      "State": "Maharashtra",
+      "City": "Pune",
+      "Password": "123456"
     },
     {
-      "id": 6,
-      "hospitalname": "More Hospital",
-      "hospitalemail": "morehosp@gmail.com",
-      "hospitalmobile": "9422245698",
-      "hospitalregistration": "14785",
-      "hospitaladdress": "Baner",
-      "hospitalstate": "Maharashtra",
-      "hospitalcity": "Pune",
-      "hospitalpass": ""
-    },
-    {
-      "id": 7,
-      "hospitalname": "AIIMS",
-      "hospitalemail": "aiims@gmail.com",
-      "hospitalmobile": "9512365478",
-      "hospitalregistration": "12345",
-      "hospitaladdress": "rajiv road",
-      "hospitalstate": "Goa",
-      "hospitalcity": "Pune",
-      "hospitalpass": ""
-    },
-    {
-      "id": 8,
-      "hospitalname": "Gayatri",
-      "hospitalemail": "gayatri@gmail.com",
-      "hospitalmobile": "7854785962",
-      "hospitalregistration": "12345",
-      "hospitaladdress": "Kothrud",
-      "hospitalstate": "Maharashtra",
-      "hospitalcity": "Pune",
-      "hospitalpass": ""
-    },
-    {
-      "id": 10,
-      "hospitalname": "RG hospital",
-      "hospitalemail": "rg@gmail.com",
-      "hospitalmobile": "1234568798",
-      "hospitalregistration": "98765",
-      "hospitaladdress": "rahatgaon road",
-      "hospitalstate": "Maharashtra",
-      "hospitalcity": "Nagpur",
-      "hospitalpass": ""
-    },
-    {
-      "id": 11,
-      "hospitalname": "Durgesh Hospital",
-      "hospitalemail": "durgeshhosp@gmail.com",
-      "hospitalmobile": "7845123698",
-      "hospitalregistration": "14785",
-      "hospitaladdress": "rahatgaon road",
-      "hospitalstate": "Maharashtra",
-      "hospitalcity": "Mumbai",
-      "hospitalpass": "123456"
+      "id": 4,
+      "HospitalName": "Neon Hospital",
+      "Email": "neon@gmail.com",
+      "PhoneNo": "7458745874",
+      "HospitalId": "77777",
+      "Address": "Baner",
+      "State": "Maharashtra",
+      "City": "Pune",
+      "Password": "123456"
     }
   ],
   "contact": [
@@ -129,53 +110,81 @@
   ],
   "request": [
     {
-      "id": 14,
-      "hospitalname": "",
-      "hospitalregistration": "11223",
-      "bloodgroup": "B-",
-      "quantity": "20",
-      "status": "approved"
-    },
-    {
-      "id": 16,
-      "hospitalname": "",
-      "hospitalregistration": "14785",
-      "bloodgroup": "B-",
-      "quantity": "20",
+      "id": 1,
+      "HospitalId": "99999",
+      "bloodgroup": "B+",
+      "quantity": "23",
       "status": "rejected"
     },
     {
-      "id": 17,
-      "hospitalname": "",
-      "hospitalregistration": "14785",
+      "id": 2,
+      "HospitalId": "88888",
+      "bloodgroup": "B+",
+      "quantity": "12",
+      "status": "approved"
+    },
+    {
+      "id": 3,
+      "HospitalId": "77777",
+      "bloodgroup": "B+",
+      "quantity": "25",
+      "status": "pending"
+    },
+    {
+      "id": 4,
+      "HospitalId": "77777",
+      "bloodgroup": "AB+",
+      "quantity": "20",
+      "status": "pending"
+    },
+    {
+      "id": 5,
+      "HospitalId": "55555",
       "bloodgroup": "B+",
       "quantity": "25",
       "status": "approved"
-    },
-    {
-      "id": 18,
-      "hospitalname": "",
-      "hospitalregistration": "14785",
-      "bloodgroup": "B-",
-      "quantity": "25",
-      "status": "rejected"
     }
   ],
   "stock": [
     {
-      "id": 2,
-      "date": "2022-01-14",
-      "Ap": "34",
-      "An": "54",
-      "Bp": "43",
-      "Bn": "45",
-      "Op": "45",
+      "id": 1,
+      "date": "2022-01-08",
+      "Ap": "43",
+      "An": "23",
+      "Bp": "54",
+      "Bn": "23",
+      "Op": "43",
       "On": "45",
-      "ABp": "54",
-      "ABn": "54"
+      "ABp": "32",
+      "ABn": "34"
     }
   ],
-  "gallery": [],
+  "addadmin": [
+    {
+      "Adminid": 1,
+      "AdminName": "Rushikesh",
+      "AdminEmail": "rushikesh@gmail.com",
+      "AdminPassword": "112121",
+      "IsActive": "",
+      "id": 1
+    },
+    {
+      "Adminid": 2,
+      "AdminName": "rutuja",
+      "AdminEmail": "rutuja@gmail.com",
+      "AdminPassword": "123456",
+      "IsActive": "",
+      "id": 2
+    },
+    {
+      "Adminid": 0,
+      "AdminName": "admin",
+      "AdminEmail": "admin@gmail.com",
+      "AdminPassword": "123456",
+      "IsActive": "",
+      "id": 3
+    }
+  ],
   "comments": [],
   "profile": {
     "name": "typicode"

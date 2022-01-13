@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators, FormBuilder } from '@angular/forms';
-import { HospitallistModel } from '../admin-hospital-list/hospital-list.model';
+import { Hospital } from '../admin-hospital-list/hospital-list.model';
 import { HospitallistService } from 'src/app/services/hospitallist.service'; 
 
 @Component({
@@ -10,7 +10,7 @@ import { HospitallistService } from 'src/app/services/hospitallist.service';
 })
 export class HospitalRegisterComponent implements OnInit {
 
-  HospitallistModelObj: HospitallistModel = new HospitallistModel();
+  HospitallistModelObj: Hospital = new Hospital();
  
   hospitalForm = new FormGroup({
     
@@ -18,38 +18,38 @@ export class HospitalRegisterComponent implements OnInit {
   })
 
 
-  get hospitalname() {
-    return this.hospitalForm.get('hospitalname'); 
+  get HospitalName() {
+    return this.hospitalForm.get('HospitalName'); 
   }
   
-  get hospitalmobile(){
-    return this.hospitalForm.get('hospitalmobile')
+  get PhoneNo(){
+    return this.hospitalForm.get('PhoneNo')
   }
   
-  get hospitalemail() {
-    return this.hospitalForm.get('hospitalemail'); 
+  get Email() {
+    return this.hospitalForm.get('Email'); 
   }
   
-  get hospitalregistration(){
-    return this.hospitalForm.get('hospitalregistration'); 
+  get HospitalId(){
+    return this.hospitalForm.get('HospitalId'); 
   }
   
-  get hospitaladdress(){
-    return this.hospitalForm.get('hospitaladdress'); 
+  get Address(){
+    return this.hospitalForm.get('Address'); 
   }
   
-  get hospitalstate(){
-    return this.hospitalForm.get('hospitalstate'); 
+  get State(){
+    return this.hospitalForm.get('State'); 
   }
   
-  get hospitalcity(){
-    return this.hospitalForm.get('hospitalcity'); 
+  get City(){
+    return this.hospitalForm.get('City'); 
   }
   
  
   
-  get hospitalpass(){
-    return this.hospitalForm.get('hospitalpass'); 
+  get Password(){
+    return this.hospitalForm.get('Password'); 
   }
   
   
@@ -70,14 +70,14 @@ export class HospitalRegisterComponent implements OnInit {
   ngOnInit(): void {
 
     this.hospitalForm = this.formbuilder.group({
-      hospitalname : new FormControl("",[Validators.required,Validators.minLength(5),Validators.pattern("^[a-z A-Z]+$")]),
-      hospitalemail :  new FormControl("",[Validators.email,Validators.required]),
-      hospitalmobile: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{10}$")]),
-      hospitalregistration: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{5}$")]),
-      hospitaladdress:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(25)]),
-      hospitalstate:new FormControl("",[Validators.required]),
-      hospitalcity:new FormControl("",[Validators.required]),
-      hospitalpass:new FormControl("",[Validators.required]),
+      HospitalName : new FormControl("",[Validators.required,Validators.minLength(5),Validators.pattern("^[a-z A-Z]+$")]),
+      Email :  new FormControl("",[Validators.required,Validators.pattern("^[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,3}")]),
+      PhoneNo: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{10}$")]),
+      HospitalId: new FormControl("",[Validators.required,Validators.pattern("^[0-9]{5}$")]),
+      Address:new FormControl("",[Validators.required,Validators.minLength(3),Validators.maxLength(25)]),
+      State:new FormControl("",[Validators.required]),
+      City:new FormControl("",[Validators.required]),
+      Password:new FormControl("",[Validators.required]),
       
      
       
@@ -89,14 +89,14 @@ export class HospitalRegisterComponent implements OnInit {
   }
 
   postHospitalDetails(){
-    this.HospitallistModelObj.hospitalname = this.hospitalForm.value.hospitalname;
-    this.HospitallistModelObj.hospitalemail = this.hospitalForm.value.hospitalemail;
-    this.HospitallistModelObj.hospitalmobile = this.hospitalForm.value.hospitalmobile;
-    this.HospitallistModelObj.hospitalregistration = this.hospitalForm.value.hospitalregistration;
-    this.HospitallistModelObj.hospitaladdress = this.hospitalForm.value.hospitaladdress;
-    this.HospitallistModelObj.hospitalstate = this.hospitalForm.value.hospitalstate;
-    this.HospitallistModelObj.hospitalcity = this.hospitalForm.value.hospitalcity;
-    this.HospitallistModelObj.hospitalpass = this.hospitalForm.value.hospitalpass;
+    this.HospitallistModelObj.HospitalName = this.hospitalForm.value.HospitalName;
+    this.HospitallistModelObj.Email = this.hospitalForm.value.Email;
+    this.HospitallistModelObj.PhoneNo = this.hospitalForm.value.PhoneNo;
+    this.HospitallistModelObj.HospitalId = this.hospitalForm.value.HospitalId;
+    this.HospitallistModelObj.Address = this.hospitalForm.value.Address;
+    this.HospitallistModelObj.State = this.hospitalForm.value.State;
+    this.HospitallistModelObj.City = this.hospitalForm.value.City;
+    this.HospitallistModelObj.Password = this.hospitalForm.value.Password;
    
     
   

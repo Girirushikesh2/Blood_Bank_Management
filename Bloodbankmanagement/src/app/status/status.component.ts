@@ -17,7 +17,7 @@ export class StatusComponent implements OnInit {
   constructor(private requestblood:RequestService, ) { }
 
   ngOnInit(): void {
-    this.requestblood.getstatus((sessionStorage.getItem('hospitalregistration')!)).subscribe((res:any)=>{
+    this.requestblood.getstatus((sessionStorage.getItem('HospitalId')!)).subscribe((res:any)=>{
       console.log(res);
        this.info=res;
     })
